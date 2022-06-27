@@ -17,7 +17,7 @@ function CoverParticles() {
         init={particlesInit}
         loaded={particlesLoaded}
         params={{
-          fps_limit: 60,
+          fps_limit: 30,
           zLayers: 1,
           detectRetina: true,
           "background": {
