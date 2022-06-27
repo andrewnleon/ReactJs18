@@ -168,7 +168,7 @@ function CoverParticles() {
               "y": -5
             },
             "inlineArrangement": "equidistant",
-            "scale": 2.5,
+            "scale": 3.2,
             "type": "inline",
             "url": "./img/me_1.svg"
           },
