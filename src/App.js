@@ -54,14 +54,6 @@ function App() {
           </Scrollbars>
         </BrowserRouter>
       </main>
-//       {/* <Route path="/" element={<Cover />}>
-// <Route index element={<RecentWork />} />
-// <Route path="teams" element={<Portfolio />}>
-//   <Route path=":teamId" element={<CaseStudies />} />
-//   <Route path="new" element={<Contact />} />
-//   <Route index element={<Blog />} />
-// </Route>
-// </Route> */}
   );
 }
 export default App;
