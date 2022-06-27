@@ -60,4 +60,4 @@ jobs:
           app-name: 'andrewnl-react'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA376877E46A416E8DE4393A5B60742D }}
-          package: .
+          package: release.zip
