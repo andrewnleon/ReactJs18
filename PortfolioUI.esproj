@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.7-alpha">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>6a9fc220-b30b-453e-afdd-4b847bc60973</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupCommand>set BROWSER=CHROME&amp;&amp;npm start</StartupCommand>
+    <JavaScriptTestRoot>src\</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
+    <BuildCommand>
+    </BuildCommand>
+  </PropertyGroup>
+  <ItemGroup>
+    <Script Include="**" Exclude="*.esproj;**\node_modules\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Script Remove="src\scss\framework\forms\**" />
+    <Script Remove="src\scss\framework\helpers\**" />
+    <Script Remove="src\scss\framework\mixins\**" />
+    <Script Remove="src\scss\framework\utilities\**" />
+    <Script Remove="src\scss\framework\vendor\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Script Remove="src\scss\framework\_accordion.scss" />
+    <Script Remove="src\scss\framework\_alert.scss" />
+    <Script Remove="src\scss\framework\_badge.scss" />
+    <Script Remove="src\scss\framework\_breadcrumb.scss" />
+    <Script Remove="src\scss\framework\_button-group.scss" />
+    <Script Remove="src\scss\framework\_buttons.scss" />
+    <Script Remove="src\scss\framework\_card.scss" />
+    <Script Remove="src\scss\framework\_carousel.scss" />
+    <Script Remove="src\scss\framework\_close.scss" />
+    <Script Remove="src\scss\framework\_containers.scss" />
+    <Script Remove="src\scss\framework\_dropdown.scss" />
+    <Script Remove="src\scss\framework\_forms.scss" />
+    <Script Remove="src\scss\framework\_functions.scss" />
+    <Script Remove="src\scss\framework\_grid.scss" />
+    <Script Remove="src\scss\framework\_helpers.scss" />
+    <Script Remove="src\scss\framework\_images.scss" />
+    <Script Remove="src\scss\framework\_list-group.scss" />
+    <Script Remove="src\scss\framework\_mixins.scss" />
+    <Script Remove="src\scss\framework\_modal.scss" />
+    <Script Remove="src\scss\framework\_nav.scss" />
+    <Script Remove="src\scss\framework\_navbar.scss" />
+    <Script Remove="src\scss\framework\_offcanvas.scss" />
+    <Script Remove="src\scss\framework\_pagination.scss" />
+    <Script Remove="src\scss\framework\_placeholders.scss" />
+    <Script Remove="src\scss\framework\_popover.scss" />
+    <Script Remove="src\scss\framework\_progress.scss" />
+    <Script Remove="src\scss\framework\_reboot.scss" />
+    <Script Remove="src\scss\framework\_root.scss" />
+    <Script Remove="src\scss\framework\_spinners.scss" />
+    <Script Remove="src\scss\framework\_tables.scss" />
+    <Script Remove="src\scss\framework\_toasts.scss" />
+    <Script Remove="src\scss\framework\_tooltip.scss" />
+    <Script Remove="src\scss\framework\_transitions.scss" />
+    <Script Remove="src\scss\framework\_type.scss" />
+    <Script Remove="src\scss\framework\_utilities.scss" />
+    <Script Remove="src\setupTests.js" />
+  </ItemGroup>
+  <!-- This target is copied from the ASP.NET SPA template in order to ensure node_modules are in place. -->
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+</Project>
