@@ -35,7 +35,7 @@ module.exports = {
 
   output: {
     // output path is required for `clean-webpack-plugin`
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "build/dist"),
     // this places all images processed in an image folder
     assetModuleFilename: "img/[hash][ext][query]",
   },
@@ -80,7 +80,7 @@ module.exports = {
         },
       },
       {
-        test: /\.js$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
         use: {
           // without additional settings, this will reference .babelrc
@@ -111,7 +111,7 @@ module.exports = {
 
   // required if using webpack-dev-server
   devServer: {
-    contentBase: "build",
+    contentBase: "src",
     hot: true,
   },
 };

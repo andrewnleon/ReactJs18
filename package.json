@@ -49,7 +49,7 @@
   },
   "scripts": {
     "start": "react-scripts start webpack --config webpack.config.js",
-    "build": "webpack --mode=production --node-env=production",
+    "build": "react-scripts build webpack --config webpack.config.js",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
