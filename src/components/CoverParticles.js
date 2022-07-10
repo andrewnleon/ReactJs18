@@ -17,15 +17,14 @@ function CoverParticles() {
         init={particlesInit}
         loaded={particlesLoaded}
         params={{
-          fps_limit: 30,
+          fps_limit: 60,
           zLayers: 1,
           detectRetina: true,
           "background": {
-            image: "url('./img/drewcity_metaverse.png')",
-            color: "rgba(0,0,0,0.9)",
-            position: "top center",
-            repeat: "no-repeat"
-
+            "image": "url('./img/drewcity_metaverse.png')",
+            "color": "rgba(0,0,0,0.9)",
+            "position": "top center",
+            "repeat": "no-repeat"
           },
           "interactivity": {
             "events": {
@@ -39,10 +38,10 @@ function CoverParticles() {
                 "mode": "repulse"
               },
               "onHover": {
-                "enable": true,
+                "enable": false,
                 "mode": "bubble",
                 "parallax": {
-                  "enable": false,
+                  "enable": true,
                   "force": 5,
                   "smooth": 10
                 }

@@ -1,0 +1,32 @@
+main {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  position: relative;
+  display: grid;
+}
+
+section {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+canvas {
+  vertical-align: middle;
+}
+
+.font-primary {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-secondary {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+#cover-container {
+  height: 48vh;
+  min-height: 570px;
+  padding: 30px;
+}

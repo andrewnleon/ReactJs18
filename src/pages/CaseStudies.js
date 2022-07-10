@@ -2,7 +2,7 @@ import React from "react";
 function CaseStudies() {
   return (
     <>
-      <section className="bg-light d-flex col-lg-12 text-center">
+      <section className="bg-white-secondary py-5 text-center">
         <div className="container">
           <div className="my-3 p-3">
             <h2 className="display-5">Case Studies</h2>
