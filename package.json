@@ -31,7 +31,7 @@
     "craco-start": "craco start",
     "craco-build": "craco build",
     "postbuild": "purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css",
-    "start": "react-scripts start",
+    "start": "craco start",
     "build": "craco build",
     "eject": "react-scripts eject"
   },
