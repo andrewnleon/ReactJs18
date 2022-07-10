@@ -2,7 +2,7 @@ const purgecss = require('@fullhuman/postcss-purgecss');
 
 module.exports = {
   style: {
-    postcss: {
+    postCss: {
       plugins: [
         purgecss({
           content: [
