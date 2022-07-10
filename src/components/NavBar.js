@@ -25,6 +25,7 @@ function ToolBar() {
       setColor(false);
     }
   };
+  
   useEffect(() => {
     window.addEventListener("scroll", changeColor);
   }, []);

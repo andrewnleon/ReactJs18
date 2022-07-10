@@ -15,7 +15,7 @@ import "@fontsource/space-grotesk";
 
 function App() {
   return (
-    <main>
+    <main>  
       <script src="holder.js"></script>
       <BrowserRouter>
         <ToolBar />
