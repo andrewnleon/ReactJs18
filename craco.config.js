@@ -2,20 +2,19 @@ const purgecss = require('@fullhuman/postcss-purgecss');
 
 module.exports = {
   style: {
-    postCss: {
+    postOptions: {
       plugins: [
         purgecss({
           content: [
+            './public/index.html',
             './src/index.js', 
             './src/App.js', 
             './src/**/*.js', 
-            './src/**/*.jsx', 
-            './public/index.html',
-            './node_modules/bootstrap/js/dist/*.js'
+            '../../node_modules/bootstrap/js/dist/*.js'
           ]
         })
       ],
-      whitelistPatternsChildren: [/navbar-*/],
+      whitelistPatternsChildren: [/.*/],
       variables: true
     },
   },
