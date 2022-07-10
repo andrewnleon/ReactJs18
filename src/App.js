@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./css/App.css";
+import "./scss/App.scss";
 import "holderjs";
 import Cover from "./components/Cover";
 import Footer from "./components/Footer";

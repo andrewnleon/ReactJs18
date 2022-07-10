@@ -6,12 +6,16 @@ module.exports = {
       plugins: [
         purgecss({
           content: [
+            './src/index.js', 
             './src/App.js', 
             './src/**/*.js', 
-            './public/index.html']
+            './src/**/*.jsx', 
+            './public/index.html',
+            './node_modules/bootstrap/js/dist/*.js'
+          ]
         })
       ],
-      whitelistPatternsChildren: [/navbar.*/],
+      whitelistPatternsChildren: [/navbar-*/],
       variables: true
     },
   },
