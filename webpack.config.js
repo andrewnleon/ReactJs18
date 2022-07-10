@@ -35,7 +35,7 @@ module.exports = {
 
   output: {
     // output path is required for `clean-webpack-plugin`
-    path: path.resolve(__dirname, "build/dist"),
+    path: path.resolve(__dirname, "build"),
     // this places all images processed in an image folder
     assetModuleFilename: "img/[hash][ext][query]",
   },
@@ -48,7 +48,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             // This is required for asset imports in CSS, such as url()
-            options: { publicPath: "css" },
+            options: { publicPath: "" },
           },
           "css-loader",
           "postcss-loader",
