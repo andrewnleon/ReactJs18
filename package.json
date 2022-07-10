@@ -49,9 +49,8 @@
   },
   "scripts": {
     "start": "react-scripts start webpack --config webpack.config.js",
-    "build": "react-scripts build webpack --config webpack.config.js",
+    "build": "react-scripts build webpack --config webpack.config.js webpack --mode=production",
     "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
     "eject": "react-scripts eject"
   },

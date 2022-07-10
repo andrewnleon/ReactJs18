@@ -7,7 +7,7 @@ import { zoomInRight } from "react-animations";
 // import Particles from "react-tsparticles";
 // import { Parallax } from "react-parallax";
 
-const coverBg = require('../img/drewcity_metaverse.png');
+const coverBg = './img/drewcity_metaverse.png';
 const bounceAnimation = keyframes`${zoomInRight}`;
 const BounceIn = styled.div`
   animation: 1.2s ${bounceAnimation};
