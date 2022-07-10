@@ -31,7 +31,7 @@ module.exports = {
 
   // This is unnecessary in Webpack 5, because it's the default.
   // However, react-refresh-webpack-plugin can't find the entry without it.
-  entry: "./src/index.js",
+  entry: "src/index.html",
 
   output: {
     // output path is required for `clean-webpack-plugin`
