@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./css/App.css";
+import "./scss/App.scss";
+import "@fontsource/space-grotesk";
 import "holderjs";
 import Cover from "./components/Cover";
 import Footer from "./components/Footer";
@@ -11,13 +12,11 @@ import Portfolio from "./pages/Portfolio";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
-import "@fontsource/space-grotesk";
 
 function App() {
   return (
-    <main>  
-      <script src="holder.js"></script>
       <BrowserRouter>
+        <script src="holder.js"></script>
         <ToolBar />
         <Routes>
           <Route
@@ -50,7 +49,6 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </main>
   );
 }
 export default App;

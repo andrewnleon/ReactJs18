@@ -1,7 +1,6 @@
 {
   "short_name": "Andrew Leonberger | Portfolio",
   "name": "Andrew Leonberger's Online Portfolio",
-  "description": "A portfolio site about Andrew Nelson Leonberger",
   "icons": [
     {
       "src": "img/logo_white.svg",
@@ -19,8 +18,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "./",
+  "scope": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#0099ff",
   "background_color": "#ffffff"
 }
