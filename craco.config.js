@@ -5,7 +5,7 @@ module.exports = {
     postCss: {
       plugins: [
         purgecss({
-          content: ['./src/**/*.js', './public/index.html']
+          content: ['./src/App.js', './src/**/*.js', './public/index.html']
         }),
       ],
     },
