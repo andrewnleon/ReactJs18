@@ -6,7 +6,6 @@
   "dependencies": {
     "@fontsource/space-grotesk": "^4.5.8",
     "bootstrap": "^5.2.0-beta1",
-    "clean-webpack-plugin": "^4.0.0",
     "holderjs": "^2.9.9",
     "react": "^18.2.0",
     "react-animations": "^1.0.0",
@@ -27,6 +26,7 @@
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "clean-webpack-plugin": "^4.0.0",
     "css-minimizer-webpack-plugin": "^4.0.0",
     "glob-parent": ">=5.1.2",
     "html-webpack-plugin": "^5.5.0",
@@ -44,13 +44,12 @@
     "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
-    "start:prod": "webpack serve",
-    "start:dev": "react-scripts start dev",
+    "start": "react-scripts start",
     "build:dev": "webpack --config webpack.config.js --mode=development",
-    "build:prod": "webpack --config webpack.config.js --mode=production",
-    "watch": "webpack --watch",
-    "eject": "react-scripts eject",
-    "server": "webpack serve"
+    "build": "webpack --config webpack.config.js --mode=production",
+    "watch": "webpack --watch --config webpack.config.js --mode=production",
+    "server": "webpack serve",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

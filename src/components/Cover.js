@@ -2,8 +2,8 @@ import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import { zoomInRight } from "react-animations";
+import CoverImage from '../img/drewcity_metaverse.png';
 
-const coverBg = './img/drewcity_metaverse.png';
 const bounceAnimation = keyframes`${zoomInRight}`;
 const BounceIn = styled.div`
   animation: 1.2s ${bounceAnimation};
@@ -12,7 +12,7 @@ function Cover() {
   return (
     <Container
       style={{
-        backgroundImage: `url(${coverBg})`,
+        backgroundImage: `url(${CoverImage})`,
         backgroundSize: 'cover',
         backgroundAttachment: 'scroll',
         backgroundPosition: 'top center',

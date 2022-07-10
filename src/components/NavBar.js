@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { GoThreeBars } from "react-icons/go";
-// import { BsFillFilePdfFill } from "react-icons/bs";
-// import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { Nav, Navbar, Stack, Container } from "react-bootstrap";
-// import styled from "styled-components";
 import MainMenu from "./NavBarMenu";
 import MobileMenuCanvas from "./NavBarCanvas";
-
-const Logo = './img/logo_white.svg';
+import Logo from '../img/logo_white.svg';
 
 function ToolBar() {
+
   //Mobile menu toggle
   const options = [{ scroll: false, backdrop: true }];
   const [show, setShow] = useState(false);

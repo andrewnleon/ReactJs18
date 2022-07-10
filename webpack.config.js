@@ -11,7 +11,7 @@ const plugins = [
   new MiniCssExtractPlugin(),
   new HtmlWebpackPlugin({
     title: "Andrew Leonberger | Portfolio",
-    template: "./src/index.html",
+    template: "./public/index.html",
     filename: "index.html",
   }),
 ];
@@ -29,8 +29,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "[name].bundle.js",
-    assetModuleFilename: "img/[hash][ext][query]",
+    filename: "[name].bundle[contenthash].js",
+    assetModuleFilename: "assets/[name][ext]",
     clean: true,
   },
   module: {
@@ -41,12 +41,6 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            /**
-             * From the docs: When set, the given directory will be used
-             * to cache the results of the loader. Future webpack builds
-             * will attempt to read from the cache to avoid needing to run
-             * the potentially expensive Babel recompilation process on each run.
-             */
             cacheDirectory: true,
           },
         },
@@ -56,7 +50,9 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: { publicPath: "src/scss" },
+            options: { 
+              publicPath: ""
+            },
           },
           "css-loader",
           "postcss-loader",
@@ -69,7 +65,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: "asset",
+        type: "asset/resource",
         parser: {
           dataUrlCondition: {
             maxSize: 30 * 1024,
