@@ -2,10 +2,6 @@ import React from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import { zoomInRight } from "react-animations";
-// import CoverParticles from "./CoverParticles";
-// import { BrowserView } from "react-device-detect";
-// import Particles from "react-tsparticles";
-// import { Parallax } from "react-parallax";
 
 const coverBg = './img/drewcity_metaverse.png';
 const bounceAnimation = keyframes`${zoomInRight}`;
