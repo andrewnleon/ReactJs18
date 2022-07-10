@@ -10,8 +10,8 @@ const plugins = [
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin(),
   new HtmlWebpackPlugin({
-    title: 'Webpack App',
-    template: "./public/index.html",
+    title: 'Andrew Leonberger | Portfolio',
+    template: "./src/template.html",
     filename: 'index.html',
   }),
 ];
