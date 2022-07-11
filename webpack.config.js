@@ -3,7 +3,8 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// new BundleAnalyzerPlugin(),
 
 let mode = "production";
 let target = "web";
@@ -17,7 +18,7 @@ const plugins = [
     favicon: "./public/favicon.ico",
     manifest: "./public/manifest.json",
   }),
-  new BundleAnalyzerPlugin(),
+
 ];
 if (process.env.NODE_ENV === "production") {
   mode = "development";
