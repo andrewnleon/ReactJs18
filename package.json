@@ -20,13 +20,14 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
-    "css-loader": "^6.7.1",
     "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
     "glob-parent": ">=5.1.2",
     "html-webpack-plugin": "^5.5.0",
@@ -45,11 +46,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build:dev": "webpack --config webpack.config.js --mode=development",
-    "build": "webpack --config webpack.config.js --mode=production",
-    "watch": "webpack --watch --config webpack.config.js --mode=production",
-    "server": "webpack serve",
-    "eject": "react-scripts eject"
+    "build": "react-scripts build",
+    "build:dev": "webpack --config webpack.config.js --mode=development"
   },
   "eslintConfig": {
     "extends": [
