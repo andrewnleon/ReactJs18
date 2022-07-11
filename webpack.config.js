@@ -33,7 +33,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "[name].bundle[contenthash].js",
+    filename: "[name].bundle.js",
     assetModuleFilename: "assets/[name][ext]",
     clean: true,
   },
@@ -43,7 +43,7 @@ module.exports = {
         test: /\.(json)$/,
         use: {
           loader: "file-loader",
-          options: { name: "[name].[ext]", outputPath: "./" },
+          options: { name: "[name].[ext]", outputPath: "." },
         },
       },
       {
