@@ -45,11 +45,23 @@ canvas {
 }
 
 #toolbar .nav-link.active {
-  border-top: 8px solid rgba(0, 153, 255, 0.3647058824);
+  border-top: 7px solid #0099ff;
   color: #0099ff;
   position: relative;
-  margin-top: -20px;
-  padding-top: 20px;
+  margin-top: -22px;
+  padding-top: 23px;
+}
+
+#toolbar .nav-link.active::after {
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #0099ff;
+  display: inline-block;
+  margin: -1px auto 0;
+  position: absolute;
+  top: 0;
+  left: 40%;
 }
 
 .btn-outline-secondary {

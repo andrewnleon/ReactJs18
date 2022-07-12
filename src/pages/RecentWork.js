@@ -1,14 +1,22 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import styled, { keyframes } from "styled-components";
+import { zoomInRight, fadeIn } from "react-animations";
+import { FaLaptopCode } from "react-icons/fa";
+import { Gi3DGlasses } from "react-icons/gi";
 
-function RecentWork(props) {
-  // const numbers = props.numbers;
+const fadeAnimation = keyframes`${fadeIn}`;
+const FadeEffect = styled.div`
+  animation: 1.2s ${fadeAnimation};
+`;
+
+function RecentWork() {
   const numbers = [1, 2, 3];
   return (
     <>
-      <section className="bg-light-primary py-5 text-center">
+      <section id="recentwork" className="bg-light-primary py-5 text-center">
         <Container className="container">
-          <Col className="mb-3 pb-1">
+          <Col className="my-3 pt-5 pb-1">
             <h2 className="text-uppercase display-6">Recent Work</h2>
             <hr className="divider" />
           </Col>
@@ -18,9 +26,9 @@ function RecentWork(props) {
                 <Card key={number}>
                   <Card.Img
                     data-src="holder.js/300x200?auto=yes"
-                    className=""
+                    className="img-fluid"
                     style={{
-                      height: "200"
+                      height: "200",
                     }}
                   />
                   {/* Content */}
@@ -52,14 +60,19 @@ function RecentWork(props) {
             ))}
           </Row>
           <Row>
-            <Col className="mt-4">
+            <Col className="mt-4 pb-1">
               <Button
                 size="lg"
-                variant="primary"
-                className="btn text-uppercase text-white"
-                href="#"
+                variant="outline-secondary bg-secondary"
+                className="text-uppercase p-0"
+                href="#recentwork"
               >
-                View More
+                <span>
+                  View All
+                  <FadeEffect>
+                    <Gi3DGlasses size={27} className="mx-2 mt-n2 btn-icon" />
+                  </FadeEffect>
+                </span>
               </Button>
             </Col>
           </Row>

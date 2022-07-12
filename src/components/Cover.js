@@ -38,7 +38,7 @@ function Cover() {
         </Row>
         <ParallaxProvider>
           <Row role="main" id="cover-banner" className="inner cover">
-            <Parallax speed={-12} easing={"easeIn"}>
+            <Parallax speed={-5} easing={"easeIn"}>
               <BounceIn>
                 <Col
                   sm={8}
@@ -58,7 +58,7 @@ function Cover() {
                     size="lg"
                     variant="outline-secondary bg-primary"
                     className="text-uppercase p-0 bg-opacity-25"
-                    href="#"
+                    href="#recentwork"
                   >
                     <span>
                       Discover
