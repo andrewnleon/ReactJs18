@@ -3,9 +3,9 @@ import { Col, Container, Row, Button } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import { zoomInRight, fadeIn } from "react-animations";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
-import { FaGulp, FaLaptopCode } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
 import { SiReact, SiCsharp, SiGulp  } from "react-icons/si";
-import { DiCss3, DiGulp } from "react-icons/di";
+import { DiCss3 } from "react-icons/di";
 import CoverImage from "../img/drewcity_metaverse.png";
 
 const fadeAnimation = keyframes`${fadeIn}`;
