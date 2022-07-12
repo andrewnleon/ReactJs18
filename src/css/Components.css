@@ -72,8 +72,9 @@ canvas {
           animation: fadeIn 0.5s;
 }
 .btn-outline-secondary span {
-  width: 15vh;
-  padding: 10px 0;
+  position: relative;
+  width: 16vh;
+  padding: 10px 4px;
   z-index: 1;
   display: block;
   color: white;
@@ -81,20 +82,19 @@ canvas {
   font-weight: 300;
   letter-spacing: 1px;
   left: 0;
-  position: relative;
   transition: all 0.2s ease-out 0s;
 }
 .btn-outline-secondary span:hover {
   left: -18px;
 }
 .btn-outline-secondary .btn-icon {
-  width: 26px;
   position: absolute;
+  width: 26px;
   top: 20px;
-  right: 4px;
+  right: -14px;
   line-height: 18px;
   opacity: 0;
-  transition: opacity 0.3s linear 0s;
+  transition: opacity 0.15s linear 0s;
 }
 
 .wave {

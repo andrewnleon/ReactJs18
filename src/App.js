@@ -17,7 +17,6 @@ function App() {
   return (
     <BrowserRouter>
       <main>
-        <script src="holder.js"></script>
         <ToolBar />
         <Routes>
           <Route

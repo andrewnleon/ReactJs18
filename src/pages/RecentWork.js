@@ -17,8 +17,11 @@ function RecentWork(props) {
               <Col>
                 <Card key={number}>
                   <Card.Img
-                    data-src="holder.js/254px254?auto=yes"
-                    className="img-fluid"
+                    data-src="holder.js/300x200?auto=yes"
+                    className=""
+                    style={{
+                      height: "200"
+                    }}
                   />
                   {/* Content */}
                   <Card.Body>

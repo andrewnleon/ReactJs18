@@ -4,6 +4,7 @@ import { Nav, Navbar, Stack, Container } from "react-bootstrap";
 import MainMenu from "./NavBarMenu";
 import MobileMenuCanvas from "./NavBarCanvas";
 import Logo from "../img/logo_white.svg";
+import ScrollspyNav from "react-scrollspy-nav";
 
 function ToolBar() {
   //Mobile menu toggle
@@ -34,44 +35,49 @@ function ToolBar() {
 
   return (
     <Container fluid>
-      <Navbar
-        id="toolbar"
-        fixed="top"
-        expand="lg"
-        variant="dark"
-        className={`
-          ${size ? "p-1" : ""} 
-          ${color ? "bg-secondary bg-opacity-90" : "bg-secondary bg-opacity-50"}
-        `}
-        style={{
-          transition: "all 0.5s ease-out",
-        }}
+      <ScrollspyNav
+        scrollTargetIds={["portfolio", "section_2", "section_3"]}
+        offset={-70}
+        scrollDuration="100"
+        activeNavClass="active"
+        headerBackground="false"
       >
-        <Container>
-          <Navbar.Brand className="m-0" href="/">
-            <img
-              alt="Andrew Leonberger Portoflio"
-              src={Logo}
-              width="50"
-              height="50"
-              className="d-inline-block align-middle"
-            />
-          </Navbar.Brand>
-          <Stack
-            className="me-auto my-auto d-none d-sm-none d-md-none d-lg-block"
-            direction="horizontal"
-            gap={1}
-          >
-            <Nav className="text-uppercase" defaultActiveKey="/">
-              <MainMenu />
-            </Nav>
-          </Stack>
-          <Stack
-            className="my-auto d-none d-sm-none d-md-none d-lg-block"
-            direction="horizontal"
-            gap={1}
-          >
-            {/* <Nav className="text-uppercase">
+        <Navbar
+          id="toolbar"
+          fixed="top"
+          expand="lg"
+          variant="dark"
+          className={` ${size ? "p-1" : ""} ${
+            color ? "bg-secondary bg-opacity-90" : "bg-secondary bg-opacity-50"
+          } `}
+          style={{ transition: "all 0.5s ease-out" }}
+          role="navigation"
+        >
+          <Container>
+            <Navbar.Brand className="m-0" href="/">
+              <img
+                alt="Andrew Leonberger Portoflio"
+                src={Logo}
+                width="50"
+                height="50"
+                className="d-inline-block align-middle"
+              />
+            </Navbar.Brand>
+            <Stack
+              className="me-auto my-auto d-none d-sm-none d-md-none d-lg-block"
+              direction="horizontal"
+              gap={1}
+            >
+              <Nav className="text-uppercase" defaultActiveKey="/">
+                <MainMenu />
+              </Nav>
+            </Stack>
+            <Stack
+              className="my-auto d-none d-sm-none d-md-none d-lg-block"
+              direction="horizontal"
+              gap={1}
+            >
+              {/* <Nav className="text-uppercase">
                 <Nav.Link className="ps-0 ms-0 mt-1" href="#LinkedIn">
                   <TiSocialLinkedinCircular size={28} />
                 </Nav.Link>
@@ -79,7 +85,7 @@ function ToolBar() {
                   Resume <BsFillFilePdfFill className="mb-1" size={18} />
                 </Nav.Link>
               </Nav> */}
-            {/* <Form className="d-flex mr-auto">
+              {/* <Form className="d-flex mr-auto">
                 <Form.Control
                   type="search"
                   placeholder="Search"
@@ -88,26 +94,27 @@ function ToolBar() {
                 />
                 <Button variant="primary">Search</Button>
               </Form> */}
-          </Stack>
-          <Nav className="d-block d-sm-block d-md-block d-lg-none">
-            <Nav.Link
-              variant="dark"
-              onClick={toggleShow}
-              className="me-3 p-0 m-0"
-            >
-              <GoThreeBars />
-            </Nav.Link>
-          </Nav>
-          {options.map((props, id) => (
-            <MobileMenuCanvas
-              show={show}
-              onHide={handleClose}
-              key={id}
-              {...props}
-            />
-          ))}
-        </Container>
-      </Navbar>
+            </Stack>
+            <Nav className="d-block d-sm-block d-md-block d-lg-none">
+              <Nav.Link
+                variant="dark"
+                onClick={toggleShow}
+                className="me-3 p-0 m-0"
+              >
+                <GoThreeBars />
+              </Nav.Link>
+            </Nav>
+            {options.map((props, id) => (
+              <MobileMenuCanvas
+                show={show}
+                onHide={handleClose}
+                key={id}
+                {...props}
+              />
+            ))}
+          </Container>
+        </Navbar>
+      </ScrollspyNav>
     </Container>
   );
 }

@@ -5,9 +5,9 @@ function MainMenu() {
   return (
     <>
       <Nav.Link href="#portfolio"><span>Portfolio</span></Nav.Link>
-      <Nav.Link href="#"><span>About</span></Nav.Link>
-      <Nav.Link href="#"><span>Contact</span></Nav.Link>
-      <Nav.Link href="#"><span>Blog</span></Nav.Link>
+      <Nav.Link href="#about"><span>About</span></Nav.Link>
+      <Nav.Link href="#contact"><span>Contact</span></Nav.Link>
+      <Nav.Link href="#blog"><span>Blog</span></Nav.Link>
     </>
   );
 }

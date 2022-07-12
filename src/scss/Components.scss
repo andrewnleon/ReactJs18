@@ -5,7 +5,6 @@ canvas { vertical-align: middle; }
 #toolbar .nav-link { position: relative; font-weight: 500; text-decoration: none; margin-right:10px; margin-left:10px; top:0px; }
 #toolbar .nav-link::before { content: ''; position: absolute; width: 100%; height: 3px; border-radius: 10px; background-color: #0099ff5d; bottom: 0; left: 0; transform-origin: right; transform: scaleX(0); transition: transform .3s ease-in-out; }
 #toolbar .nav-link:hover::before { transform-origin: left; transform: scaleX(1); }
-
 #toolbar .nav-link.active {
   border-top: 8px solid #0099ff5d;
   color:#0099ff;
@@ -31,8 +30,9 @@ canvas { vertical-align: middle; }
       }
     }
     span {
-      width: 15vh;
-      padding:10px 0;
+      position: relative;
+      width: 16vh;
+      padding:10px 4px;
       z-index: 1;
       display: block;
       color: white;
@@ -40,20 +40,19 @@ canvas { vertical-align: middle; }
       font-weight: 300;
       letter-spacing: 1px;
       left: 0;
-      position: relative;
       transition: all 0.2s ease-out 0s;
     }
     span:hover{
       left: -18px;
     }
     .btn-icon {
-      width: 26px;
       position: absolute;
+      width: 26px;
       top: 20px;
-      right: 4px;
+      right: -14px;
       line-height: 18px;
       opacity: 0;
-      transition: opacity 0.3s linear 0s;
+      transition: opacity 0.15s linear 0s;
     }
 }
 

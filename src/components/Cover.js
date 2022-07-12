@@ -68,17 +68,17 @@ function Cover() {
                     </span>
                     <Col className="wave"></Col>
                   </Button>
-                  <Row className="gap-0 mt-3 text-primary opacity-25 col-6 mx-auto">
-                    <Col lg={3} className="text-center">
+                  <Row className="g-0 mt-3 text-primary opacity-25 col-6 mx-auto">
+                    <Col className="text-center">
                       <SiCsharp className="fs-2" />
                     </Col>
-                    <Col lg={3} className="text-center">
+                    <Col className="text-center">
                       <SiReact className="fs-2" />
                     </Col>
-                    <Col lg={3} className="text-center">
+                    <Col className="text-center">
                       <DiCss3 className="fs-2" />
                     </Col>
-                    <Col lg={3} className="text-center">
+                    <Col className="text-center">
                       <SiGulp className="fs-2" />
                     </Col> 
                   </Row>
