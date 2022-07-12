@@ -4,17 +4,17 @@
   "description": "A portfolio site about Andrew Nelson Leonberger",
   "icons": [
     {
-      "src": "/static/media/logo_white.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/svg+xml"
+      "src": "../../src/img/logo_white.svg",
+      "type": "image/svg+xml",
+      "sizes": "64x64 32x32 24x24 16x16"
     },
     {
-      "src": "/static/media/logo_white.svg",
+      "src": "../../src/img/logo_white.svg",
       "type": "image/svg+xml",
       "sizes": "192x192"
     },
     {
-      "src": "/static/media/logo_white.svg",
+      "src": "../../src/img/logo_white.svg",
       "type": "image/svg+xml",
       "sizes": "512x512"
     }

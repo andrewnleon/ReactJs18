@@ -3,10 +3,9 @@ import { GoThreeBars } from "react-icons/go";
 import { Nav, Navbar, Stack, Container } from "react-bootstrap";
 import MainMenu from "./NavBarMenu";
 import MobileMenuCanvas from "./NavBarCanvas";
-import Logo from '../img/logo_white.svg';
+import Logo from "../img/logo_white.svg";
 
 function ToolBar() {
-
   //Mobile menu toggle
   const options = [{ scroll: false, backdrop: true }];
   const [show, setShow] = useState(false);
@@ -15,16 +14,22 @@ function ToolBar() {
 
   //Smooth navbar background
   const [color, setColor] = useState(false);
+  const [size, setSize] = useState(false);
   const changeColor = () => {
     if (window.scrollY >= 70) {
       setColor(true);
+      setSize(true);
     } else {
       setColor(false);
+      setSize(false);
     }
   };
-  
   useEffect(() => {
     window.addEventListener("scroll", changeColor);
+    // cleanup this component
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
   }, []);
 
   return (
@@ -34,7 +39,10 @@ function ToolBar() {
         fixed="top"
         expand="lg"
         variant="dark"
-        className={color ? "bg-primary bg-opacity-75" : "bg-transparent"}
+        className={`
+          ${size ? "p-1" : ""} 
+          ${color ? "bg-secondary bg-opacity-90" : "bg-secondary bg-opacity-50"}
+        `}
         style={{
           transition: "all 0.5s ease-out",
         }}
@@ -46,7 +54,7 @@ function ToolBar() {
               src={Logo}
               width="50"
               height="50"
-              className="d-inline-block align-middle pe-1"
+              className="d-inline-block align-middle"
             />
           </Navbar.Brand>
           <Stack
@@ -54,7 +62,7 @@ function ToolBar() {
             direction="horizontal"
             gap={1}
           >
-            <Nav className="text-uppercase">
+            <Nav className="text-uppercase" defaultActiveKey="/">
               <MainMenu />
             </Nav>
           </Stack>

@@ -13,8 +13,8 @@ const plugins = [
   new MiniCssExtractPlugin(),
   new HtmlWebpackPlugin({
     title: "Andrew Leonberger | Portfolio",
-    template: "./public/index.html",
-    filename: "index.html",
+    template: "./public/home.html",
+    filename: "home.html",
     favicon: "./public/favicon.ico",
     manifest: "./public/manifest.json",
   }),

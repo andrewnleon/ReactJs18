@@ -1,9 +1,8 @@
-main {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#cover-container {
   height: 100vh;
-  position: relative;
-  display: grid;
+  min-height: 570px;
+  max-height: 73vh;
+  padding: 30px;
 }
 
 section {
@@ -17,16 +16,115 @@ canvas {
   vertical-align: middle;
 }
 
-.font-primary {
-  font-family: "Roboto", sans-serif;
+#toolbar .nav-link {
+  position: relative;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  top: 0px;
 }
 
-.font-secondary {
-  font-family: "Space Grotesk", sans-serif;
+#toolbar .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: rgba(0, 153, 255, 0.3647058824);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
 }
 
-#cover-container {
-  height: 48vh;
-  min-height: 570px;
-  padding: 30px;
+#toolbar .nav-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+#toolbar .nav-link.active {
+  border-top: 8px solid rgba(0, 153, 255, 0.3647058824);
+  color: #0099ff;
+  position: relative;
+  margin-top: -20px;
+  padding-top: 20px;
+}
+
+.btn-outline-secondary {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  transition: opacity 0.3s linear 0s;
+}
+.btn-outline-secondary:hover .wave {
+  top: -120px;
+  background-color: rgba(0, 153, 255, 0.4941176471);
+}
+.btn-outline-secondary:hover .btn-icon {
+  visibility: visible;
+  display: inline-block;
+  color: white;
+  opacity: 1;
+  -webkit-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
+}
+.btn-outline-secondary span {
+  width: 15vh;
+  padding: 10px 0;
+  z-index: 1;
+  display: block;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  left: 0;
+  position: relative;
+  transition: all 0.2s ease-out 0s;
+}
+.btn-outline-secondary span:hover {
+  left: -18px;
+}
+.btn-outline-secondary .btn-icon {
+  width: 26px;
+  position: absolute;
+  top: 20px;
+  right: 4px;
+  line-height: 18px;
+  opacity: 0;
+  transition: opacity 0.3s linear 0s;
+}
+
+.wave {
+  width: 100%;
+  height: 230px;
+  background-color: rgba(0, 153, 255, 0.1215686275);
+  box-shadow: inset 0 0 50px rgba(0, 153, 255, 0.137254902);
+  position: absolute;
+  left: 0;
+  top: -80px;
+  transition: 1s;
+}
+.wave::before, .wave::after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: -10;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.wave::before {
+  border-radius: 45%;
+  background-color: rgba(0, 153, 255, 0.0941176471);
+  -webkit-animation: wave 15s linear infinite;
+          animation: wave 15s linear infinite;
+}
+.wave::after {
+  border-radius: 40%;
+  background-color: rgba(0, 153, 255, 0.2196078431);
+  -webkit-animation: wave 30s linear infinite;
+          animation: wave 30s linear infinite;
 }/*# sourceMappingURL=Components.css.map */

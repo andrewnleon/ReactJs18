@@ -1,0 +1,8 @@
+@keyframes wave {
+    0% {
+      transform: translate(-50%,-75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%,-75%) rotate(360deg);
+    }
+  }  

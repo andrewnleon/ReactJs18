@@ -7,7 +7,7 @@ import Cover from "./components/Cover";
 import Footer from "./components/Footer";
 import Education from "./pages/Education";
 import ToolBar from "./components/NavBar";
-// import RecentWork from "./pages/RecentWork";
+import RecentWork from "./pages/RecentWork";
 import Portfolio from "./pages/Portfolio";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
@@ -15,7 +15,8 @@ import Blog from "./pages/Blog";
 
 function App() {
   return (
-      <BrowserRouter>
+    <BrowserRouter>
+      <main>
         <script src="holder.js"></script>
         <ToolBar />
         <Routes>
@@ -24,6 +25,7 @@ function App() {
             element={
               <>
                 <Cover />
+                <RecentWork />
                 <Portfolio />
                 <CaseStudies />
                 <Education />
@@ -48,7 +50,8 @@ function App() {
           />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </main>
+    </BrowserRouter>
   );
 }
 export default App;
