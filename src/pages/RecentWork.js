@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
-import { zoomInRight, fadeIn } from "react-animations";
-import { FaLaptopCode } from "react-icons/fa";
+import { fadeIn } from "react-animations";
 import { Gi3DGlasses } from "react-icons/gi";
 
 const fadeAnimation = keyframes`${fadeIn}`;
@@ -15,8 +14,8 @@ function RecentWork() {
   return (
     <>
       <section id="recentwork" className="bg-light-primary py-5 text-center">
-        <Container className="container">
-          <Col className="my-3 pt-5 pb-1">
+        <Container>
+          <Col className="mt-2 mb-3 pb-1">
             <h2 className="text-uppercase display-6">Recent Work</h2>
             <hr className="divider" />
           </Col>
@@ -24,13 +23,13 @@ function RecentWork() {
             {numbers.map((number) => (
               <Col>
                 <Card key={number}>
-                  <Card.Img
-                    data-src="holder.js/300x200?auto=yes"
-                    className="img-fluid"
-                    style={{
-                      height: "200",
-                    }}
-                  />
+                  <Col className="thumbnail rounded-lg h-100 d-block">
+                    <Col className="caption">
+                      Test
+                    </Col>
+                    <Card.Img data-src="holder.js/300x200?auto=yes" className="img-fluid" style={{ height: "200" }}
+                    />
+                  </Col>
                   {/* Content */}
                   <Card.Body>
                     <Card.Title>Card title</Card.Title>

@@ -48,7 +48,7 @@ function ToolBar() {
           expand="lg"
           variant="dark"
           className={` ${size ? "p-1" : ""} ${
-            color ? "bg-secondary bg-opacity-90" : "bg-secondary bg-opacity-50"
+            color ? "bg-secondary bg-opacity-100" : "bg-secondary bg-opacity-50"
           } `}
           style={{ transition: "all 0.5s ease-out" }}
           role="navigation"

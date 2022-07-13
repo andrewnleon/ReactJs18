@@ -6,24 +6,8 @@ canvas { vertical-align: middle; }
 #toolbar .nav-link::before { content: ''; position: absolute; width: 100%; height: 3px; border-radius: 10px; background-color: #0099ff5d; bottom: 0; left: 0; transform-origin: right; transform: scaleX(0); transition: transform .3s ease-in-out; }
 #toolbar .nav-link:hover::before { transform-origin: left; transform: scaleX(1); }
 
-#toolbar .nav-link.active {
-  border-top: 7px solid #0099ff;
-  color:#0099ff;
-  position: relative;
-  margin-top:-22px;
-  padding-top:23px;
-}
-#toolbar .nav-link.active::after {
-  content: "";
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid #0099ff;
-  display: inline-block;
-  margin:-1px auto 0;
-  position: absolute;
-  top: 0;
-  left: 40%;
-}
+#toolbar .nav-link.active { border-top: 7px solid #0099ff; color:#FFFFFF; position: relative; margin-top:-22px; padding-top:23px; } 
+#toolbar .nav-link.active::after { content: ""; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 7px solid #0099ff; display: inline-block; margin:-1px auto 0; position: absolute; top: 0; left: 40%; }
 
 .btn-outline-secondary {
     position: relative;
@@ -41,31 +25,9 @@ canvas { vertical-align: middle; }
         animation: fadeIn 0.5s;
       }
     }
-    span {
-      position: relative;
-      width: 16vh;
-      padding:10px 4px;
-      z-index: 1;
-      display: block;
-      color: white;
-      font-size: 1.3rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      left: 0;
-      transition: all 0.2s ease-out 0s;
-    }
-    span:hover{
-      left: -18px;
-    }
-    .btn-icon {
-      position: absolute;
-      width: 26px;
-      top: 20px;
-      right: -14px;
-      line-height: 18px;
-      opacity: 0;
-      transition: opacity 0.15s linear 0s;
-    }
+    span { position: relative; width: 180px; padding:10px 4px; z-index: 1; display: block; color: white; font-size: 1.3rem; font-weight: 300; letter-spacing: 1px; left: 0; transition: all 0.2s ease-out 0s; }
+    span:hover{ left: -18px; }
+    .btn-icon { position: absolute; width: 26px; top: 20px; right: -14px; line-height: 18px; opacity: 0; transition: opacity 0.15s linear 0s; }
 }
 
 .wave {
@@ -97,3 +59,7 @@ canvas { vertical-align: middle; }
     animation: wave 30s linear infinite;
   }
 }
+
+.thumbnail {position:relative; overflow:hidden; min-height:180px; height:180px; width:100%; cursor: pointer; }
+.caption { position:absolute; opacity:0%; left:0; background:rgba(66, 139, 202, 0.75); width:100%; height:100%; padding:0; text-align:center; color:#fff !important; z-index:2; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.thumbnail:hover .caption { opacity:0.95; }
