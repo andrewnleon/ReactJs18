@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { Col } from "react-bootstrap";
 
 function Contact() {
   return (
-    <div>Contact</div>
-  )
+    <>
+    </>
+  );
 }
 
-export default Contact
+export default Contact;

@@ -1,3 +1,35 @@
+.wave {
+  width: 100%;
+  height: 230px;
+  background-color: rgba(0, 153, 255, 0.1215686275);
+  box-shadow: inset 0 0 50px rgba(0, 153, 255, 0.137254902);
+  position: absolute;
+  left: 0;
+  top: -80px;
+  transition: 1s;
+}
+.wave::before, .wave::after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: -10;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.wave::before {
+  border-radius: 45%;
+  background-color: rgba(0, 153, 255, 0.0941176471);
+  -webkit-animation: wave 15s linear infinite;
+          animation: wave 15s linear infinite;
+}
+.wave::after {
+  border-radius: 40%;
+  background-color: rgba(0, 153, 255, 0.2196078431);
+  -webkit-animation: wave 30s linear infinite;
+          animation: wave 30s linear infinite;
+}
+
 @-webkit-keyframes wave {
   0% {
     transform: translate(-50%, -75%) rotate(0deg);
@@ -6,6 +38,7 @@
     transform: translate(-50%, -75%) rotate(360deg);
   }
 }
+
 @keyframes wave {
   0% {
     transform: translate(-50%, -75%) rotate(0deg);

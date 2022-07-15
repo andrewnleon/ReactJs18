@@ -1,17 +1,24 @@
-import React from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
+import React, { useRef, useState } from "react";
+import {
+  Col,
+  Container,
+  Row,
+  Button,
+  Tooltip,
+  OverlayTrigger,
+} from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
-import { zoomInRight, fadeIn } from "react-animations";
+import { zoomInRight } from "react-animations";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { FaLaptopCode } from "react-icons/fa";
-import { SiReact, SiCsharp, SiGulp  } from "react-icons/si";
+import {
+  SiReact,
+  SiCsharp,
+  SiGulp,
+  SiMicrosoftsqlserver,
+} from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
 import CoverImage from "../img/drewcity_metaverse.png";
-
-const fadeAnimation = keyframes`${fadeIn}`;
-const FadeEffect = styled.div`
-  animation: 1.2s ${fadeAnimation};
-`;
 
 const bounceAnimation = keyframes`${zoomInRight}`;
 const BounceIn = styled.div`
@@ -19,6 +26,15 @@ const BounceIn = styled.div`
 `;
 
 function Cover() {
+  const [show, setShow] = useState(true);
+  const target = useRef(null);
+  const stackIcons = [
+    { id: 1, icon: <SiCsharp className="fs-2" />, tooltip: "C# .Net" },
+    { id: 2, icon: <SiReact className="fs-2" />, tooltip: "ReactJs" },
+    { id: 3, icon: <DiCss3 className="fs-2" />, tooltip: "Css3" },
+    { id: 4, icon: <SiGulp className="fs-2" />, tooltip: "GulpJs" },
+    { id: 5, icon: <SiMicrosoftsqlserver className="fs-2" />, tooltip: "SQL" },
+  ];
   return (
     <Container
       style={{
@@ -38,17 +54,17 @@ function Cover() {
         </Row>
         <ParallaxProvider>
           <Row role="main" id="cover-banner" className="inner cover">
-            <Parallax speed={-5} easing={"easeIn"}>
+            <Parallax speed={-4} easing={"easeIn"}>
               <BounceIn>
                 <Col
                   sm={8}
                   md={8}
                   lg={5}
                   xl={4}
-                  className="mx-auto bg bg-secondary bg-opacity-95 rounded rounded-3 py-4 px-3 text-white text-center"
+                  className="mx-auto bg bg-primary bg-opacity-95 rounded rounded-3 py-4 px-3 text-white text-center"
                 >
                   <h1 className="font-secondary fw-bold">Andrew Leonberger</h1>
-                  <hr className="spacer mx-5 px-5 my-3 text-opacity-90 text-primary" />
+                  <hr className="spacer mx-5 col-2 mx-auto my-2 text-opacity-90 text-white" />
                   <p className="lead text-light">
                     Specializing in UI/UX/DX development
                     <br />
@@ -62,25 +78,42 @@ function Cover() {
                   >
                     <span>
                       Discover
-                      <FadeEffect>
-                        <FaLaptopCode className="mx-2 mt-n1 btn-icon" />
-                      </FadeEffect>
+                      <FaLaptopCode className="mx-2 mt-n1 btn-icon" />
                     </span>
                     <Col className="wave"></Col>
                   </Button>
-                  <Row className="g-0 mt-3 text-primary opacity-25 col-6 mx-auto">
-                    <Col className="text-center">
-                      <SiCsharp className="fs-2" />
-                    </Col>
-                    <Col className="text-center">
-                      <SiReact className="fs-2" />
-                    </Col>
-                    <Col className="text-center">
-                      <DiCss3 className="fs-2" />
-                    </Col>
-                    <Col className="text-center">
-                      <SiGulp className="fs-2" />
-                    </Col> 
+                  <Row className="g-2 mt-3 text-secondary opacity-40 col-10 mx-auto">
+                    {show && (
+                      <>
+                        {stackIcons.map((prop) => {
+                          return (
+                            <OverlayTrigger
+                              key={prop.id}
+                              placement="bottom"
+                              delay={150}
+                              overlay={
+                                <Tooltip
+                                  id={`tooltip-${prop.id}`}
+                                  className="position-absolute"
+                                >
+                                  {prop.tooltip}
+                                </Tooltip>
+                              }
+                            >
+                              <Col
+                                key={prop.id}
+                                className="text-center"
+                                ref={target}
+                                onMouseOut={() => setShow(false)}
+                                onMouseOver={() => setShow(true)}
+                              >
+                                {prop.icon}
+                              </Col>
+                            </OverlayTrigger>
+                          );
+                        })}
+                      </>
+                    )}
                   </Row>
                 </Col>
               </BounceIn>

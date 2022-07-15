@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { GoThreeBars } from "react-icons/go";
-import { Nav, Navbar, Stack, Container } from "react-bootstrap";
+import { Nav, Navbar, Stack, Container, Button } from "react-bootstrap";
 import MainMenu from "./NavBarMenu";
 import MobileMenuCanvas from "./NavBarCanvas";
 import Logo from "../img/logo_white.svg";
 import ScrollspyNav from "react-scrollspy-nav";
+import { BsLinkedin } from "react-icons/bs";
+import styled, { keyframes } from "styled-components";
+import { flipInX } from "react-animations";
+
+const SlideUpEffect = keyframes`${flipInX}`;
+const Flip = styled.div`
+  animation: 0.5s ${SlideUpEffect};
+`;
 
 function ToolBar() {
   //Mobile menu toggle
@@ -27,7 +35,6 @@ function ToolBar() {
   };
   useEffect(() => {
     window.addEventListener("scroll", changeColor);
-    // cleanup this component
     return () => {
       window.removeEventListener("scroll", changeColor);
     };
@@ -37,9 +44,9 @@ function ToolBar() {
     <Container fluid>
       <ScrollspyNav
         scrollTargetIds={["recentwork", "portfolio", "about", "contact"]}
-        offset={-68}
-        scrollDuration="100"
-        activeNavClass="text-primary"
+        offset={-50}
+        scrollDuration="70"
+        activeNavClass="text-secondary"
         headerBackground="false"
       >
         <Navbar
@@ -48,7 +55,7 @@ function ToolBar() {
           expand="lg"
           variant="dark"
           className={` ${size ? "p-1" : ""} ${
-            color ? "bg-secondary bg-opacity-100" : "bg-secondary bg-opacity-50"
+            color ? "bg-primary bg-opacity-100" : "bg-primary bg-opacity-50"
           } `}
           style={{ transition: "all 0.5s ease-out" }}
           role="navigation"
@@ -77,14 +84,14 @@ function ToolBar() {
               direction="horizontal"
               gap={1}
             >
-              {/* <Nav className="text-uppercase">
-                <Nav.Link className="ps-0 ms-0 mt-1" href="#LinkedIn">
-                  <TiSocialLinkedinCircular size={28} />
-                </Nav.Link>
-                <Nav.Link className="btn btn-secondary my-auto" href="#resume">
-                  Resume <BsFillFilePdfFill className="mb-1" size={18} />
-                </Nav.Link>
-              </Nav> */}
+              <Button
+                variant="primary text-secondary rounded-circle"
+                className="btn px-2 opacity-10"
+                href="#LinkedIn"
+              >
+                <BsLinkedin size={21} />
+              </Button>
+
               {/* <Form className="d-flex mr-auto">
                 <Form.Control
                   type="search"
@@ -101,7 +108,7 @@ function ToolBar() {
                 onClick={toggleShow}
                 className="me-3 p-0 m-0"
               >
-                <GoThreeBars />
+                <GoThreeBars size={26} />
               </Nav.Link>
             </Nav>
             {options.map((props, id) => (

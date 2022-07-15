@@ -5,7 +5,7 @@ import "@fontsource/space-grotesk";
 import "holderjs";
 import Cover from "./components/Cover";
 import Footer from "./components/Footer";
-import Education from "./pages/Education";
+import About from "./pages/About";
 import ToolBar from "./components/NavBar";
 import RecentWork from "./pages/RecentWork";
 import Portfolio from "./pages/Portfolio";
@@ -26,8 +26,9 @@ function App() {
                 <Cover />
                 <RecentWork />
                 <Portfolio />
-                <CaseStudies />
-                <Education />
+                {/* <CaseStudies />
+                <About /> */}
+                <Contact />
               </>
             }
           />

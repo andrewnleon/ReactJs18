@@ -1,0 +1,40 @@
+
+.btn-outline-primary {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    transition: opacity 0.3s linear 0s;
+    &:hover {
+      .wave { top: -120px; background-color: #0099ff7e; }
+      .btn-icon{
+        visibility: visible;
+        display:inline-block;
+        color:white;
+        opacity: 1;
+        animation: fadeIn 0.5s;
+      }
+    }
+    span { position: relative; width: 180px; padding:10px 4px; z-index: 1; display: block; color: white; font-size: 1.3rem; font-weight: 300; letter-spacing: 1px; left: 0; transition: all 0.2s ease-out 0s; }
+    span:hover{ left: -18px; }
+    .btn-icon { position: absolute; width: 26px; top: 20px; right: -14px; line-height: 18px; opacity: 0; transition: opacity 0.15s linear 0s; }
+}
+.btn-outline-secondary {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  transition: opacity 0.3s linear 0s;
+  &:hover {
+    .btn-icon{
+      visibility: visible;
+      display:inline-block;
+      color:white;
+      opacity: 1;
+      animation: fadeIn 0.5s;
+    }
+  }
+  span { position: relative; width: 180px; padding:10px 4px; z-index: 1; display: block; color: white; font-size: 1.3rem; font-weight: 300; letter-spacing: 1px; left: 0; transition: all 0.2s ease-out 0s; }
+  span:hover{ left: -18px; }
+  .btn-icon { position: absolute; width: 26px; top: 20px; right: -14px; line-height: 18px; opacity: 0; transition: opacity 0.15s linear 0s; }
+}
