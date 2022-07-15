@@ -9,7 +9,7 @@ function NavBarCanvas({ name, ...props }) {
   return (
     <>
       <Offcanvas
-        className="bg-secondary bg-opacity-90 navbar-dark"
+        className="bg-primary bg-opacity-90 navbar-dark"
         show={show}
         onHide={handleClose}
         {...props}

@@ -3,28 +3,28 @@
     "id": 1,
     "quote": "Andrew joined us to bring web development in-house, and last week we rolled out the newest (and best!) version of www.StanleyMartin.com. Our website is fantastic, and Andrew's efforts to dramatically improve how it works on mobile phones are simply awesome. Our new website platform should enable our digital marketing results to soar ever higher!",
     "author": "Steve Alloy",
-    "position": "President, CEO",
+    "jobtitle": "President, CEO",
     "company": "Stanley Martin Homes"
   },
   {
     "id": 2,
     "quote": "Andrew's time at Liquidity was marked by numerous branding activities, launches, and redesigns of our many e-commerce marketplaces and properties. His work was timely, as requested, and his efforts flexible in the face of a fast-moving and lean-running strategy. I would recommend Andrew, whether as a consultant or as a member of an in-house development staff.",
     "author": "David Emerson",
-    "position": "Vice President, Deputy CISO",
+    "jobtitle": "Vice President, Deputy CISO",
     "company": "Liquidity Services"
   },
   {
     "id": 3,
     "quote": "Andrew is a bundle of creative energy and fresh ideas that get reflected in his work. Besides he is a wonderful human being who listens to others and brings novelty in his work. It is a great joy to work with him. He is very talented web designer and consistently delivers good quality work. He takes time to listen and understand requirements and uses his creativity to develop a good quality output.",
     "author": "Sandeep Dommeti",
-    "position": "Sr Software Engineer",
+    "jobtitle": "Sr Software Engineer",
     "company": "Liquidity Services"
   },
   {
     "id": 4,
     "quote": "I've had the pleasure of working with Andrew over the past three years and have always been impressed by his abilities. He excelled in the area of web design UI/UX and brought knowledge, creativity and versatility to every project. I could trust that whatever he worked on would be well thought out and executed.",
     "author": "Omar Bilal",
-    "position": "Sr. Graphic Designer",
+    "jobtitle": "Sr. Graphic Designer",
     "company": "Liquidity Services"
   }
 ]

@@ -2,17 +2,14 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./scss/App.scss";
 import "@fontsource/space-grotesk";
-import "holderjs";
 import Cover from "./components/Cover";
 import Footer from "./components/Footer";
-import About from "./pages/About";
 import ToolBar from "./components/NavBar";
-import RecentWork from "./pages/RecentWork";
-import Portfolio from "./pages/Portfolio";
-import CaseStudies from "./pages/CaseStudies";
-import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
-import Feedback from "./pages/Feedback";
+import RecentWork from "./components/RecentWork";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
+import Blog from "./components/Blog";
+import Feedback from "./components/Feedback";
 
 function App() {
   return (
@@ -27,8 +24,6 @@ function App() {
                 <Cover />
                 <RecentWork />
                 <Portfolio />
-                {/* <CaseStudies />
-                <About /> */}
                 <Feedback />
                 <Contact />
               </>

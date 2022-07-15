@@ -16,7 +16,7 @@ function Feedback() {
         <Slide triggerOnce={true} direction="up">
           <BsChatSquareQuoteFill size={56} className="text-white mb-2" />
           <Col lg={12}>
-            <h2 className="display-5 text-uppercase font-secondary">
+            <h2 className="text-uppercase display-6 font-secondary">
               Testimonials
             </h2>
             <hr className="spacer mx-auto" />
@@ -37,7 +37,7 @@ function Feedback() {
               {statements
                 ? statements.map(function (prop) {
                     return (
-                      <Carousel.Item key={prop.id} style={{ height: "33vh" }}>
+                      <Carousel.Item key={prop.id} style={{ height: "30vh" }}>
                         <Carousel.Caption className="m-n1">
                           <Container className="bg-primary text-white pt-4 px-4 pb-1 rounded">
                             <blockquote className="blockquote fst-italic">

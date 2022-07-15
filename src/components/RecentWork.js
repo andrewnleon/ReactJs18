@@ -58,7 +58,7 @@ function RecentWork() {
           <Slide triggerOnce={true} direction="down">
             <FaLaptopCode size={56} className="text-light-secondary mb-2" />
             <Col className="mt-0 mb-3 pb-1">
-              <h2 className="text-uppercase display-6">Recent Work</h2>
+              <h2 className="text-uppercase display-6 font-secondary">Recent Work</h2>
               <hr className="spacer mx-auto" />
             </Col>
           </Slide>
@@ -99,24 +99,4 @@ function RecentWork() {
     </>
   );
 }
-
 export default RecentWork;
-
-// import { Spinner } from "react-bootstrap";
-// import useFetch from "../api/useFetch";
-
-// function RecentWork() {
-//   const { data: projects, isLoading, error } = useFetch("/weatherforecast");
-//   return (
-//     <>
-//       {error && <div>{error}</div>}
-//       {isLoading && <Spinner animation="grow" />}
-//       <ul>
-//         {projects.map((project) => (
-//           <li key={project.id}>{project.date}</li>
-//         ))}
-//       </ul>
-//     </>
-//   );
-// }
-// export default RecentWork;

@@ -1,15 +1,8 @@
 import React from "react";
 import {
-  Button,
-  Col,
   Container,
-  Dropdown,
   Image,
-  ListGroup,
-  Nav,
-  Navbar,
   Row,
-  Stack,
 } from "react-bootstrap";
 import Logo from "../img/logo_white.svg";
 function Footer() {
