@@ -6,7 +6,6 @@
   "dependencies": {
     "@fontsource/space-grotesk": "^4.5.8",
     "bootstrap": "^5.2.0-beta1",
-    "holderjs": "^2.9.9",
     "react": "^18.2.0",
     "react-animations": "^1.0.0",
     "react-awesome-reveal": "^3.8.1",
