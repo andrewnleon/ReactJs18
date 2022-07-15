@@ -7,6 +7,7 @@ import { DiCss3 } from "react-icons/di";
 import { BsWordpress } from "react-icons/bs";
 import { VscAzure } from "react-icons/vsc";
 import { Gi3DGlasses } from "react-icons/gi";
+import { FaLaptopCode } from "react-icons/fa";
 
 function RecentWork() {
   const projects = [
@@ -37,7 +38,7 @@ function RecentWork() {
     },
     {
       id: 3,
-      name: "Fantasy Factory Performance",
+      name: "Fantasy Factory",
       frameworks: (
         <>
           <SiCsharp className="fs-2" />
@@ -49,26 +50,23 @@ function RecentWork() {
   ];
   return (
     <>
-      <Col id="recentwork" className="scroll-anchor bg-white">
+      <Col id="recentwork" className="scroll_anchor bg-white">
         &nbsp;
       </Col>
       <section className="bg-light-primary pt-0 pb-5">
         <Container className="text-center">
           <Slide triggerOnce={true} direction="down">
+            <FaLaptopCode size={56} className="text-light-secondary mb-2" />
             <Col className="mt-0 mb-3 pb-1">
               <h2 className="text-uppercase display-6">Recent Work</h2>
-              <hr className="spacer mx-5 col-2 mx-auto my-2 text-opacity-90 text-white" />
+              <hr className="spacer mx-auto" />
             </Col>
           </Slide>
           <Row xs={1} md={3} lg={12} className="g-4">
             {projects.map((prop) => {
               return (
                 <Col key={prop.id}>
-                  <Slide
-                    direction="up"
-                    triggerOnce={true}
-                    delay={prop.delay}
-                  >
+                  <Slide direction="up" triggerOnce={true} delay={prop.delay}>
                     <RecentWorkCard
                       id={prop.id}
                       name={prop.name}

@@ -44,7 +44,7 @@ function Cover() {
         backgroundPosition: "top center",
         backgroundRepeat: "no-repeat",
       }}
-      id="cover-container"
+      id="cover_container"
       className="d-flex flex-column p-0"
       fluid
     >
@@ -57,10 +57,10 @@ function Cover() {
             <Parallax speed={-4} easing={"easeIn"}>
               <BounceIn>
                 <Col
-                  sm={8}
+                  sm={12}
                   md={8}
                   lg={5}
-                  xl={4}
+                  xl={5}
                   className="mx-auto bg bg-primary bg-opacity-95 rounded rounded-3 py-4 px-3 text-white text-center"
                 >
                   <h1 className="font-secondary fw-bold">Andrew Leonberger</h1>
@@ -90,7 +90,7 @@ function Cover() {
                             <OverlayTrigger
                               key={prop.id}
                               placement="bottom"
-                              delay={150}
+                              delay={900}
                               overlay={
                                 <Tooltip
                                   id={`tooltip-${prop.id}`}

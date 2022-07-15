@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { GoThreeBars } from "react-icons/go";
-import { Nav, Navbar, Stack, Container, Button } from "react-bootstrap";
+import { Nav, Navbar, Stack, Container, Button, Image } from "react-bootstrap";
 import MainMenu from "./NavBarMenu";
 import MobileMenuCanvas from "./NavBarCanvas";
 import Logo from "../img/logo_white.svg";
 import ScrollspyNav from "react-scrollspy-nav";
 import { BsLinkedin } from "react-icons/bs";
-import styled, { keyframes } from "styled-components";
-import { flipInX } from "react-animations";
-
-const SlideUpEffect = keyframes`${flipInX}`;
-const Flip = styled.div`
-  animation: 0.5s ${SlideUpEffect};
-`;
 
 function ToolBar() {
   //Mobile menu toggle
@@ -62,7 +55,7 @@ function ToolBar() {
         >
           <Container>
             <Navbar.Brand className="m-0" href="/">
-              <img
+              <Image
                 alt="Andrew Leonberger Portoflio"
                 src={Logo}
                 width="50"
@@ -84,14 +77,6 @@ function ToolBar() {
               direction="horizontal"
               gap={1}
             >
-              <Button
-                variant="primary text-secondary rounded-circle"
-                className="btn px-2 opacity-10"
-                href="#LinkedIn"
-              >
-                <BsLinkedin size={21} />
-              </Button>
-
               {/* <Form className="d-flex mr-auto">
                 <Form.Control
                   type="search"

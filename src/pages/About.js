@@ -3,7 +3,7 @@ import { Col, Container } from "react-bootstrap";
 function About() {
   return (
     <>
-      <Col id="about" className="scroll-anchor bg-white">
+      <Col id="about" className="scroll_anchor bg-white">
         &nbsp;
       </Col>
       <section className="bg-white-secondary pb-0 text-center">

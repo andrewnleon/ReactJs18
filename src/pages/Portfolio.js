@@ -5,13 +5,13 @@ import { Slide } from "react-awesome-reveal";
 function Portfolio() {
   return (
     <>
-      <Col id="portfolio" className="scroll-anchor bg-light-secondary">
+      <Col id="portfolio" className="scroll_anchor bg-light-secondary">
         &nbsp;
       </Col>
       <section
         className="bg-light-secondary pb-0 text-center"
       >
-        <Container>
+        {/* <Container>
           <Slide triggerOnce={true} direction="up">
             <Col className="mb-3 px-3">
               <h2 className="display-5 text-uppercase">Portfolio</h2>
@@ -29,9 +29,35 @@ function Portfolio() {
               <br />
               <br />
               <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </Col>
           </Slide>
-        </Container>
+        </Container> */}
       </section>
     </>
   );

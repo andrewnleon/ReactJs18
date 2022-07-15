@@ -12,6 +12,7 @@ import Portfolio from "./pages/Portfolio";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import Feedback from "./pages/Feedback";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                 <Portfolio />
                 {/* <CaseStudies />
                 <About /> */}
+                <Feedback />
                 <Contact />
               </>
             }
