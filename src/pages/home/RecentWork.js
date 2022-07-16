@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Slide, Fade } from "react-awesome-reveal";
-import RecentWorkCard from "../components/RecentWorkCard";
+import RecentWorkCard from "../../components/RecentWorkCard";
 import { SiCsharp, SiGulp } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
 import { BsWordpress } from "react-icons/bs";
@@ -56,7 +56,7 @@ function RecentWork() {
       <section className="bg-light-primary pt-0 pb-5">
         <Container className="text-center">
           <Slide triggerOnce={true} direction="down">
-            <FaLaptopCode size={56} className="text-light-secondary mb-2" />
+            <FaLaptopCode size={56} className="text-secondary mb-2 opacity-50" />
             <Col className="mt-0 mb-3 pb-1">
               <h2 className="text-uppercase display-6 font-secondary">Recent Work</h2>
               <hr className="spacer mx-auto" />

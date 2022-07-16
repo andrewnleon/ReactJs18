@@ -79,13 +79,14 @@ canvas {
 .card_thumbnail {
   position: relative;
   overflow: hidden;
+  min-height: 258px;
   max-height: 258px;
   height: 100%;
   width: 100%;
   cursor: pointer;
 }
 
-.card_thumbnail .caption {
+.card_thumbnail .card_caption {
   position: absolute;
   opacity: 0%;
   left: 0;
@@ -98,6 +99,6 @@ canvas {
   transition: all 0.3s ease-in-out;
 }
 
-.card_thumbnail:hover .caption {
+.card_thumbnail:hover .card_caption {
   opacity: 0.95;
 }/*# sourceMappingURL=Components.css.map */

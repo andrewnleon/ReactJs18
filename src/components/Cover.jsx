@@ -18,7 +18,6 @@ import {
   SiMicrosoftsqlserver,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
-import CoverImage from "../img/drewcity_metaverse.png";
 
 const bounceAnimation = keyframes`${zoomInRight}`;
 const BounceIn = styled.div`
@@ -38,7 +37,7 @@ function Cover() {
   return (
     <Container
       style={{
-        backgroundImage: `url(${CoverImage})`,
+        backgroundImage: `url(${`${process.env.PUBLIC_URL}/img/drewcity.png`})`,
         backgroundSize: "cover",
         backgroundAttachment: "scroll",
         backgroundPosition: "top center",
@@ -82,7 +81,7 @@ function Cover() {
                     </span>
                     <Col className="wave"></Col>
                   </Button>
-                  <Row className="g-2 mt-3 text-secondary opacity-40 col-10 mx-auto">
+                  <Row className="g-2 mt-3 text-secondary opacity-40 col-6 mx-auto">
                     {show && (
                       <>
                         {stackIcons.map((prop) => {

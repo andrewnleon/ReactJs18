@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "logo": "/img/clients/stanleymartin.png",
+    "company": "Stanley Martin Homes"
+  },
+  {
+    "id": 2,
+    "logo": "/img/clients/liquidityservices.png",
+    "company": "Liquidity Services"
+  },
+  {
+    "id": 3,
+    "logo": "/img/clients/fishbowl.png",
+    "company": "Fishbowl"
+  },
+  {
+    "id": 4,
+    "logo": "/img/clients/fda.png",
+    "company": "Food Drug Administration"
+  },
+  {
+    "id": 5,
+    "logo": "/img/clients/versatech.png",
+    "company": "VersaTech Inc"
+  }
+]

@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import { Button, Card, Col, Container, Image, Row } from "react-bootstrap";
+import { Button, Card, Col, Image, Row } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
-import {
-  fadeOutDown,
-  zoomIn,
-  slideInUp,
-  pulse,
-  zoomOut,
-} from "react-animations";
+import { fadeOutDown, slideInUp, pulse } from "react-animations";
 
 const SlideUpEffect = keyframes`${slideInUp}`;
 const SlideUp = styled.div`
@@ -34,10 +28,10 @@ function RecentWorkCard(prop) {
         onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}
       >
-        <Col className="card_thumbnail rounded h-100 d-block">
-          <Col className="caption bg-primary bg-opacity-50">
-            <Container className="d-flex flex-column p-0 h-100" fluid>
-              <Col className="d-flex flex-column h-100">
+        <Col className="card_thumbnail rounded">
+          <Col className="card_caption bg-primary bg-opacity-50">
+            <Col className="d-flex h-100" fluid>
+              <Col className="d-flex flex-column">
                 <Row className="masthead mb-auto">
                   <Col className="inner">
                     <Col
@@ -75,13 +69,13 @@ function RecentWorkCard(prop) {
                   </Col>
                 </Row>
               </Col>
-            </Container>
+            </Col>
           </Col>
           {isShown ? (
             <PulseIn>
               <Image
                 src="https://www.andrewnl.com/wp-content/uploads/smh_thumbnail.jpg"
-                className="img-fluid w-100 h-100"
+                className="img-fluid"
                 onError={(e) => {
                   e.target.src =
                     "https://via.placeholder.com/414x258.jpg/f4f4f4/e2e2e2/?text=No+Image+Found";
@@ -93,7 +87,7 @@ function RecentWorkCard(prop) {
               title={prop.name}
               alt={prop.name}
               src="https://www.andrewnl.com/wp-content/uploads/smh_thumbnail.jpg"
-              className="img-fluid w-100 h-100"
+              className="img-fluid"
               onError={(e) => {
                 e.target.src =
                   "https://via.placeholder.com/414x258.jpg/f4f4f4/e2e2e2/?text=No+Image+Found";

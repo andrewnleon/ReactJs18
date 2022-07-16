@@ -119,7 +119,7 @@ canvas {
   vertical-align: middle;
 }
 
-.scroll-anchor {
+.scroll_anchor {
   display: block;
   min-height: 100px;
 }
@@ -128,6 +128,7 @@ canvas {
   height: 4px;
   display: block;
   background-color: #0099ff;
+  max-width: 50px;
 }
 
 #toolbar .nav-link {
@@ -178,16 +179,16 @@ canvas {
   left: 40%;
 }
 
-.thumbnail {
+.card_thumbnail {
   position: relative;
   overflow: hidden;
-  min-height: 140px;
-  height: auto;
+  max-height: 258px;
+  height: 100%;
   width: 100%;
   cursor: pointer;
 }
 
-.thumbnail .caption {
+.card_thumbnail .caption {
   position: absolute;
   opacity: 0%;
   left: 0;
@@ -200,7 +201,7 @@ canvas {
   transition: all 0.3s ease-in-out;
 }
 
-.thumbnail:hover .caption {
+.card_thumbnail:hover .caption {
   opacity: 0.95;
 }
 
