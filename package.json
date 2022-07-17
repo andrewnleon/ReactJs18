@@ -4,6 +4,8 @@
   "private": true,
   "main": "index.js",
   "dependencies": {
+    "@portfolio-data/feedback": "file:../../../data/FeedbackData.json",
+    "@portfolio-data/jobhistory": "file:../../../data/JobHistoryData.json",
     "@fontsource/space-grotesk": "^4.5.8",
     "bootstrap": "^5.2.0-beta1",
     "imagekitio-react": "^1.1.1",
@@ -26,6 +28,8 @@
     "xml-loader": "^1.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/eslint-parser": "^7.18.2",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "browserslist": ">=4.16.5",
@@ -36,12 +40,12 @@
     "dotenv": "^16.0.1",
     "dotenv-webpack": "^8.0.0",
     "env-cmd": "^10.1.0",
+    "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "glob-parent": ">=5.1.2",
     "html-webpack-plugin": "^5.5.0",
     "immer": ">=9.0.6",
-    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.0",

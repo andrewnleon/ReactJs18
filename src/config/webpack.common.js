@@ -3,7 +3,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 const paths = require('./paths')
-const json5 = require('json5')
 
 module.exports = {
   // Where webpack looks to start building the bundle

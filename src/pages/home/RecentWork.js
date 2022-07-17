@@ -56,9 +56,14 @@ function RecentWork() {
       <section className="bg-light-primary pt-0 pb-5">
         <Container className="text-center">
           <Slide triggerOnce={true} direction="down">
-            <FaLaptopCode size={56} className="text-secondary mb-2 opacity-50" />
+            <FaLaptopCode
+              size={56}
+              className="text-secondary mb-2 opacity-50"
+            />
             <Col className="mt-0 mb-3 pb-1">
-              <h2 className="text-uppercase display-6 font-secondary">Recent Work</h2>
+              <h2 className="text-uppercase display-6 font-secondary">
+                Recent Work
+              </h2>
               <hr className="spacer mx-auto" />
             </Col>
           </Slide>
