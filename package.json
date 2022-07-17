@@ -6,8 +6,6 @@
   "dependencies": {
     "@fontsource/space-grotesk": "^4.5.8",
     "bootstrap": "^5.2.0-beta1",
-    "dotenv": "^16.0.1",
-    "env-cmd": "^10.1.0",
     "imagekitio-react": "^1.1.1",
     "react": "^18.2.0",
     "react-animations": "^1.0.0",
@@ -23,18 +21,27 @@
     "react-scroll": "^1.8.7",
     "react-scroll-parallax": "^3.2.0",
     "react-scrollspy-nav": "^1.3.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4",
+    "xml-loader": "^1.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "browserslist": ">=4.16.5",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
+    "dotenv": "^16.0.1",
+    "dotenv-webpack": "^8.0.0",
+    "env-cmd": "^10.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "glob-parent": ">=5.1.2",
     "html-webpack-plugin": "^5.5.0",
     "immer": ">=9.0.6",
+    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.0",
@@ -47,16 +54,15 @@
     "shell-quote": ">=1.7.3",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
-    "web-vitals": "^2.1.4",
     "webpack": "^5.73.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
-    "start": "react-scripts start webpack --config webpack.config.js env-cmd -f .env.development.local",
-    "build": "webpack --config webpack.config.js --mode=production",
-    "build:dev": "webpack --config webpack.config.js --mode=development"
+    "start": "react-scripts start webpack --config webpack.config.js env-cmd -f .env.production.local",
+    "start:dev": "react-scripts start webpack --config webpack.config.dev.js env-cmd -f .env.development.local",
+    "build": "webpack --config ./src/config/webpack.prod.js --mode=production"
   },
   "eslintConfig": {
     "extends": [

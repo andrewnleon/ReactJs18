@@ -10,12 +10,12 @@ function Feedback() {
     data: statements,
     isLoadingSlides,
     errorSlides,
-  } = useFetch("/data/feedbackData.json");
+  } = useFetch('./data/FeedbackData.json');
   const {
     data: jopHistory,
     isLoadingLogos,
     errorLogos,
-  } = useFetch("/data/JobHistoryData.json");
+  } = useFetch('./data/JobHistoryData.json');
   return (
     <section className="bg-light-secondary pb-0 text-center">
       <Container>

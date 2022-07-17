@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import SSRProvider from "react-bootstrap/SSRProvider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./scss/App.scss";
+import "./styles/App.scss";
 import "@fontsource/space-grotesk";
 import Footer from "./components/Footer";
 import ToolBar from "./components/NavBar";
 import Home from "./pages/home/index";
 import { IKContext } from "imagekitio-react";
+import { IMAGE_KIT, IMAGE_KIT_API_KEY } from "./config/environment"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,8 +17,8 @@ root.render(
       <BrowserRouter>
         <ToolBar />
         <IKContext
-          publicKey={`${process.env.REACT_APP_IMAGE_KIT_API_KEY}`}
-          urlEndpoint={`${process.env.REACT_APP_IMAGE_KIT}`}
+          publicKey={IMAGE_KIT_API_KEY}
+          urlEndpoint={IMAGE_KIT}
         >
           <main>
             <Routes>
