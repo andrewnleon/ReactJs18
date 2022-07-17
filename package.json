@@ -53,8 +53,8 @@
     "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
-    "start": "env-cmd -f .env.development.local react-scripts start webpack --config webpack.config.js",
-    "build": "env-cmd -f .env.production.local webpack --config webpack.config.js --mode=production",
+    "start": "react-scripts start webpack --config webpack.config.js env-cmd -f .env.development.local",
+    "build": "webpack --config webpack.config.js --mode=production",
     "build:dev": "webpack --config webpack.config.js --mode=development"
   },
   "eslintConfig": {
