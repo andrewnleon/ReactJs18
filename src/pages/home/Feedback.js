@@ -1,8 +1,9 @@
 import React from "react";
-import { Carousel, Col, Container, Image, Row, Spinner } from "react-bootstrap";
+import { Carousel, Col, Container, Row, Spinner } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
 import { BsChatSquareQuoteFill } from "react-icons/bs";
 import useFetch from "../../hooks/useFetch";
+import { IKImage } from "imagekitio-react";
 
 function Feedback() {
   const {
@@ -10,13 +11,11 @@ function Feedback() {
     isLoadingSlides,
     errorSlides,
   } = useFetch("/data/feedbackData.json");
-
   const {
     data: jopHistory,
     isLoadingLogos,
     errorLogos,
   } = useFetch("/data/JobHistoryData.json");
-
   return (
     <section className="bg-light-secondary pb-0 text-center">
       <Container>
@@ -50,7 +49,7 @@ function Feedback() {
               {statements.map(function (prop) {
                 return (
                   <Carousel.Item key={prop.id} style={{ minHeight: "330px" }}>
-                    <Carousel.Caption className="col-9 mt-n1 position-relative top-0">
+                    <Carousel.Caption className="col-9">
                       <Container className="bg-primary text-white pt-4 px-4 pb-1 rounded">
                         <blockquote className="blockquote fst-italic">
                           <p className="border-start border-5 border-secondary border-opacity-25 text-start px-3">
@@ -76,12 +75,18 @@ function Feedback() {
           {jopHistory.map((prop) => {
             return (
               <Col lg={2} xs={3} key={prop.id} className="d-flex">
-                {/* {`$/${prop.logo}`} */}
-                <Image
+                <IKImage
+                  key={prop.id}
                   className="img-fluid align-self-center mx-auto"
-                  src={`${process.env.REACT_APP_IMAGE_KIT}${prop.logo}`}
+                  path={`${prop.logo}`}
                   alt={prop.company}
                   title={prop.company}
+                  transformation={[
+                    {
+                      width: "100",
+                    },
+                  ]}
+                  loading="lazy"
                 />
               </Col>
             );

@@ -79,8 +79,6 @@ canvas {
 .card_thumbnail {
   position: relative;
   overflow: hidden;
-  min-height: 258px;
-  max-height: 258px;
   height: 100%;
   width: 100%;
   cursor: pointer;

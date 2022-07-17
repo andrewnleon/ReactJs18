@@ -30,7 +30,7 @@ function RecentWorkCard(prop) {
       >
         <Col className="card_thumbnail rounded">
           <Col className="card_caption bg-primary bg-opacity-50">
-            <Col className="d-flex h-100" fluid>
+            <Col className="d-flex h-100">
               <Col className="d-flex flex-column">
                 <Row className="masthead mb-auto">
                   <Col className="inner">

@@ -16,8 +16,8 @@ main { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-// @include media-breakpoint-only(xs) { ... }
-// @include media-breakpoint-only(sm) { ... }
+@include media-breakpoint-only(xs) { #feedback_slider .carousel-caption{ position: relative; } }
+@include media-breakpoint-only(sm) { #feedback_slider .carousel-caption{ position: relative; }  }
 // @include media-breakpoint-only(md) { ... }
 // @include media-breakpoint-only(lg) { ... }
 // @include media-breakpoint-only(xl) { ... }
