@@ -43,7 +43,7 @@ module.exports = {
       title: 'Andrew Leonberger | Portfolio',
       template: './public/index.html',
       filename: 'index.html',
-      favicon: './public/favicon.ico',
+      favicon: 'favicon.ico',
       manifest: './public/manifest.json',
     }),
   ],
@@ -60,7 +60,7 @@ module.exports = {
       { test: /\.(js|jsx)$/, use: ['babel-loader'] },
 
       // Images: Copy image files to build folder
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      { test: /\.(gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
 
       // Fonts and SVGs: Inline files
       { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
