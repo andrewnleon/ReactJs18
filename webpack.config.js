@@ -3,8 +3,6 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-// new BundleAnalyzerPlugin(),
 
 let mode = "development";
 let target = "web";
@@ -18,7 +16,6 @@ const plugins = [
     favicon: "./public/favicon.ico",
     manifest: "./public/manifest.json",
   }),
-
 ];
 if (process.env.NODE_ENV === "production") {
   mode = "production";
@@ -78,6 +75,9 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: "asset/resource",
+        use: {
+          loader: 'url-loader',
+        },
         parser: {
           dataUrlCondition: {
             maxSize: 30 * 1024,

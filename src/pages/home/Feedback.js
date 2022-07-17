@@ -3,7 +3,6 @@ import { Carousel, Col, Container, Image, Row, Spinner } from "react-bootstrap";
 import { Slide } from "react-awesome-reveal";
 import { BsChatSquareQuoteFill } from "react-icons/bs";
 import useFetch from "../../hooks/useFetch";
-import { alignPropType } from "react-bootstrap/esm/types";
 
 function Feedback() {
   const {
@@ -50,7 +49,7 @@ function Feedback() {
               )}
               {statements.map(function (prop) {
                 return (
-                  <Carousel.Item key={prop.id} style={{ minHeight:"330px",}}>
+                  <Carousel.Item key={prop.id} style={{ minHeight: "330px" }}>
                     <Carousel.Caption className="col-9 mt-n1 position-relative top-0">
                       <Container className="bg-primary text-white pt-4 px-4 pb-1 rounded">
                         <blockquote className="blockquote fst-italic">
@@ -72,20 +71,21 @@ function Feedback() {
           </Col>
         </Slide>
         <Row className="col-lg-9 col-sm-12 px-lg-5 mx-auto opacity-40 mt-1 mb-5 gap-2 justify-content-center">
-            {errorLogos && console.log(errorLogos)}
-            {isLoadingLogos && <Spinner variant="primary" animation="grow" />}
-            {jopHistory.map((prop) => {
-              return (
-                <Col lg={2} xs={3} key={prop.id} className="d-flex">
-                  <Image
-                    className="img-fluid align-self-center mx-auto"
-                    src={prop.logo}
-                    alt={prop.company}
-                    title={prop.company}
-                  />
-                </Col>
-              );
-            })}
+          {errorLogos && console.log(errorLogos)}
+          {isLoadingLogos && <Spinner variant="primary" animation="grow" />}
+          {jopHistory.map((prop) => {
+            return (
+              <Col lg={2} xs={3} key={prop.id} className="d-flex">
+                {/* {`$/${prop.logo}`} */}
+                <Image
+                  className="img-fluid align-self-center mx-auto"
+                  src={`${process.env.REACT_APP_IMAGE_KIT}${prop.logo}`}
+                  alt={prop.company}
+                  title={prop.company}
+                />
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </section>

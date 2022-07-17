@@ -18,6 +18,7 @@ import {
   SiMicrosoftsqlserver,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
+import drewCity from "../img/drewcity.png";
 
 const bounceAnimation = keyframes`${zoomInRight}`;
 const BounceIn = styled.div`
@@ -37,7 +38,7 @@ function Cover() {
   return (
     <Container
       style={{
-        backgroundImage: `url(${`${process.env.PUBLIC_URL}/img/drewcity.png`})`,
+        backgroundImage: `url(${`${drewCity}`})`,
         backgroundSize: "cover",
         backgroundAttachment: "scroll",
         backgroundPosition: "top center",
