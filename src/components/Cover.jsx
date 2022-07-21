@@ -25,8 +25,7 @@ const BounceIn = styled.div`
 `;
 
 function Cover() {
-  const [show, setShow] = useState(true);
-
+  const [showIcons, setShowIcons] = useState(true);
   const targetIcons = useRef(null);
   const stackIcons = [
     { id: 1, icon: <SiCsharp className="fs-2" />, tooltip: "C# .Net" },
@@ -36,9 +35,7 @@ function Cover() {
     { id: 5, icon: <SiMicrosoftsqlserver className="fs-2" />, tooltip: "SQL" },
   ];
   return (
-    <ParallaxProvider>
       <Container
-        data-testid="cover-test"
         style={{
           backgroundImage: `url(${process.env.REACT_APP_IMAGE_KIT}/drewcity.jpg)`,
           backgroundSize: "cover",
@@ -84,7 +81,7 @@ function Cover() {
                     <Col className="wave"></Col>
                   </Button>
                   <Row className="g-2 mt-3 text-secondary opacity-40 col-6 mx-auto">
-                    {show && (
+                    {showIcons && (
                       <>
                         {stackIcons.map((prop) => {
                           return (
@@ -105,8 +102,8 @@ function Cover() {
                                 key={prop.id}
                                 className="text-center"
                                 ref={targetIcons}
-                                onMouseOut={() => setShow(false)}
-                                onMouseOver={() => setShow(true)}
+                                onMouseOut={() => setShowIcons(false)}
+                                onMouseOver={() => setShowIcons(true)}
                               >
                                 {prop.icon}
                               </Col>
@@ -145,7 +142,6 @@ function Cover() {
           ></path>
         </svg>
       </Container>
-    </ParallaxProvider>
   );
 }
 

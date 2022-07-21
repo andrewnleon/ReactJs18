@@ -7,7 +7,7 @@ import {
 import Logo from "../../src/logo.svg";
 function Footer() {
   return (
-    <footer className="bg-primary">
+    <footer className="bg-primary" data-testid="Footer">
       <Container>
         <Row className="d-flex flex-column flex-sm-row pt-3 mb-0 pb-0 justify-content-center">
           <p className="align-content-center text-center text-white my-1 mb-0 pb-0 text-opacity-25">

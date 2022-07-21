@@ -42,6 +42,7 @@ function ToolBar() {
         headerBackground="false"
       >
         <Navbar
+          data-testid="Navbar"
           id="toolbar"
           fixed="top"
           expand="lg"

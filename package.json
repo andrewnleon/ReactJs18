@@ -82,6 +82,7 @@
     "start": "react-scripts start webpack --config webpack.config.js env-cmd -f .env.production.local",
     "start:dev": "react-scripts start webpack --config webpack.config.dev.js env-cmd -f .env.development.local",
     "build": "webpack --config ./src/config/webpack.prod.js --mode=production",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [

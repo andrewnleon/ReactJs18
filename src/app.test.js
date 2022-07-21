@@ -1,26 +1,18 @@
-import renderer from 'react-test-renderer';
-import Cover from './components/Cover'
+import React from "react";
+import { render } from "@testing-library/react";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
-it('changes the class when hovered', () => {
-  const component = renderer.create(
-    <Cover />,
+it("Testing Navar", () => {
+  const { queryByTestId } = render(
+    <NavBar />
   );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(queryByTestId("Navbar")).toBeTruthy();
+});
 
-  // manually trigger the callback
-  renderer.act(() => {
-    tree.props.onMouseEnter();
-  });
-  // re-rendering
-  tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-
-  // manually trigger the callback
-  renderer.act(() => {
-    tree.props.onMouseLeave();
-  });
-  // re-rendering
-  tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+it("Testing Footer", () => {
+  const { queryByTestId } = render(
+    <Footer />
+  );
+  expect(queryByTestId("Footer")).toBeTruthy();
 });
