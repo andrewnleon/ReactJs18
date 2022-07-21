@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Nav, Offcanvas } from "react-bootstrap";
 import MainMenu from "./NavBarMenu";
-import Logo from '../img/logo_white.svg';
+import Logo from '../../src/logo.svg';
 
 function NavBarCanvas({ name, ...props }) {
   const [show, setShow] = useState(false);

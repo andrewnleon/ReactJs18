@@ -4,7 +4,7 @@ import {
   Image,
   Row,
 } from "react-bootstrap";
-import Logo from "../img/logo_white.svg";
+import Logo from "../../src/logo.svg";
 function Footer() {
   return (
     <footer className="bg-primary">

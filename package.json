@@ -1,11 +1,12 @@
 {
-  "name": "my-webpack-project",
+  "name": "andrewnl-portfolio",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
   "dependencies": {
-    "@portfolio-data/feedback": "file:../../../data/FeedbackData.json",
-    "@portfolio-data/jobhistory": "file:../../../data/JobHistoryData.json",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
     "@fontsource/space-grotesk": "^4.5.8",
     "bootstrap": "^5.2.0-beta1",
     "imagekitio-react": "^1.1.1",
@@ -24,8 +25,7 @@
     "react-scroll-parallax": "^3.2.0",
     "react-scrollspy-nav": "^1.3.0",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4",
-    "xml-loader": "^1.2.1"
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
@@ -53,9 +53,10 @@
     "prettier": "^2.7.1",
     "react-refresh-webpack-plugin": "^0.1.0",
     "react-scripts": "^5.0.1",
+    "shell-quote": ">=1.7.3",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
-    "shell-quote": ">=1.7.3",
+    "xml-loader": "^1.2.1",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.73.0",
@@ -66,7 +67,9 @@
   "scripts": {
     "start": "react-scripts start webpack --config webpack.config.js env-cmd -f .env.production.local",
     "start:dev": "react-scripts start webpack --config webpack.config.dev.js env-cmd -f .env.development.local",
-    "build": "webpack --config ./src/config/webpack.prod.js --mode=production"
+    "build": "webpack --config ./src/config/webpack.prod.js --mode=production",
+    "test": "react-scripts test",
+    "package": "npm i"
   },
   "eslintConfig": {
     "extends": [

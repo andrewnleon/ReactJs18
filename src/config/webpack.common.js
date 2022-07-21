@@ -1,18 +1,18 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
-const paths = require('./paths')
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
+const paths = require("./paths");
 
 module.exports = {
   // Where webpack looks to start building the bundle
-  entry: [paths.src + '/index.js'],
+  entry: [paths.src + "/index.js"],
 
   // Where webpack outputs the assets and bundles
   output: {
     path: paths.build,
-    filename: '[name].bundle.js',
-    publicPath: '/',
+    filename: "[name].bundle.js",
+    publicPath: "/",
   },
 
   // Customize the webpack build process
@@ -27,10 +27,34 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: paths.public,
-          to: 'assets',
+          from: "./public/manifest.json",
+          to: "",
           globOptions: {
-            ignore: ['*.DS_Store'],
+            ignore: ["*.DS_Store"],
+          },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "./public/assets/logos",
+          to: "assets/logos",
+          globOptions: {
+            ignore: ["*.DS_Store"],
+          },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "./public/data",
+          to: "data",
+          globOptions: {
+            ignore: ["*.DS_Store"],
+          },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "./src/logo.svg",
+          to: "",
+          globOptions: {
+            ignore: ["*.DS_Store"],
           },
           noErrorOnMissing: true,
         },
@@ -40,11 +64,10 @@ module.exports = {
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
-      title: 'Andrew Leonberger | Portfolio',
-      template: './public/index.html',
-      filename: 'index.html',
-      favicon: 'favicon.ico',
-      manifest: './public/manifest.json',
+      template: "./public/index.html",
+      filename: "index.html",
+      favicon: "./public/favicon.ico",
+      manifest: "./public/manifest.json",
     }),
   ],
 
@@ -52,27 +75,25 @@ module.exports = {
   module: {
     rules: [
       //JSON
-      {test: /\.json$/,
-      use: ['json-loader'],
-      type: 'javascript/auto'},
+      { test: /\.json$/, use: ["json-loader"], type: "javascript/auto" },
 
       // JavaScript: Use Babel to transpile JavaScript files
-      { test: /\.(js|jsx)$/, use: ['babel-loader'] },
+      { test: /\.(js|jsx)$/, use: ["babel-loader"] },
 
       // Images: Copy image files to build folder
-      { test: /\.(gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      { test: /\.(gif|png|jpg|jpeg)$/i, type: "asset/resource" },
 
       // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
+      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: "asset/inline" },
     ],
   },
 
   resolve: {
-    modules: [paths.src, 'node_modules'],
-    extensions: ['.js', '.jsx', '.json'],
+    modules: [paths.src, "node_modules"],
+    extensions: [".js", ".jsx", ".json"],
     alias: {
-      '@': paths.src,
+      "@": paths.src,
       assets: paths.public,
     },
   },
-}
+};

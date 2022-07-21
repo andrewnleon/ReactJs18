@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { GoThreeBars } from "react-icons/go";
-import { Nav, Navbar, Stack, Container, Button, Image } from "react-bootstrap";
+import { Nav, Navbar, Stack, Container, Image } from "react-bootstrap";
 import MainMenu from "./NavBarMenu";
 import MobileMenuCanvas from "./NavBarCanvas";
-import Logo from "../img/logo_white.svg";
+import Logo from "../../src/logo.svg";
 import ScrollspyNav from "react-scrollspy-nav";
-import { BsLinkedin } from "react-icons/bs";
 
 function ToolBar() {
   //Mobile menu toggle

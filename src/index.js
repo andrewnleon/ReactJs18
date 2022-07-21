@@ -1,42 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import SSRProvider from "react-bootstrap/SSRProvider";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./styles/App.scss";
-import "@fontsource/space-grotesk";
-import Footer from "./components/Footer";
-import ToolBar from "./components/NavBar";
-import Home from "./pages/home/index";
-import { IKContext } from "imagekitio-react";
-import { IMAGE_KIT, IMAGE_KIT_API_KEY } from "./config/environment"
+import * as serviceWorkerRegistration from './services/serviceWorkerRegistration';
+import reportWebVitals from './services/reportWebVitals';
+import App from './app';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <SSRProvider>
-      <BrowserRouter>
-        <ToolBar />
-        <IKContext
-          publicKey={IMAGE_KIT_API_KEY}
-          urlEndpoint={IMAGE_KIT}
-        >
-          <main>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Home />
-                  </>
-                }
-              />
-              <Route path="/contact" element={<></>} />
-              <Route path="/blog/:id" element={<></>} />
-            </Routes>
-            <Footer />
-          </main>
-        </IKContext>
-      </BrowserRouter>
-    </SSRProvider>
+    <App />
   </React.StrictMode>
 );
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
