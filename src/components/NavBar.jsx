@@ -35,7 +35,7 @@ function ToolBar() {
   return (
     <Container fluid>
       <ScrollspyNav
-        scrollTargetIds={["recentwork", "portfolio", "about", "contact"]}
+        scrollTargetIds={["recentwork", "portfolio"]}
         offset={-50}
         scrollDuration="70"
         activeNavClass="text-secondary"

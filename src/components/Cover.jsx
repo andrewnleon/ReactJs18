@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import { zoomInRight } from "react-animations";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { Parallax, ParallaxProvider, useParallax } from "react-scroll-parallax";
 import { FaLaptopCode } from "react-icons/fa";
 import {
   SiReact,
@@ -26,7 +26,8 @@ const BounceIn = styled.div`
 
 function Cover() {
   const [show, setShow] = useState(true);
-  const target = useRef(null);
+
+  const targetIcons = useRef(null);
   const stackIcons = [
     { id: 1, icon: <SiCsharp className="fs-2" />, tooltip: "C# .Net" },
     { id: 2, icon: <SiReact className="fs-2" />, tooltip: "ReactJs" },
@@ -35,23 +36,24 @@ function Cover() {
     { id: 5, icon: <SiMicrosoftsqlserver className="fs-2" />, tooltip: "SQL" },
   ];
   return (
-    <Container
-      style={{
-        backgroundImage: `url(${process.env.REACT_APP_IMAGE_KIT}/drewcity.jpg)`,
-        backgroundSize: "cover",
-        backgroundAttachment: "scroll",
-        backgroundPosition: "top center",
-        backgroundRepeat: "no-repeat",
-      }}
-      id="cover_container"
-      className="d-flex flex-column p-0"
-      fluid
-    >
-      <Container className="d-flex flex-column h-100">
-        <Row className="masthead mb-auto">
-          <Col className="inner"></Col>
-        </Row>
-        <ParallaxProvider>
+    <ParallaxProvider>
+      <Container
+        data-testid="cover-test"
+        style={{
+          backgroundImage: `url(${process.env.REACT_APP_IMAGE_KIT}/drewcity.jpg)`,
+          backgroundSize: "cover",
+          backgroundAttachment: "scroll",
+          backgroundPosition: "top center",
+          backgroundRepeat: "no-repeat",
+        }}
+        id="cover_container"
+        className="d-flex flex-column p-0"
+        fluid
+      >
+        <Container className="d-flex flex-column h-100">
+          <Row className="masthead mb-auto">
+            <Col className="inner"></Col>
+          </Row>
           <Row role="main" id="cover-banner" className="inner cover">
             <Parallax speed={-4} easing={"easeIn"}>
               <BounceIn>
@@ -102,7 +104,7 @@ function Cover() {
                               <Col
                                 key={prop.id}
                                 className="text-center"
-                                ref={target}
+                                ref={targetIcons}
                                 onMouseOut={() => setShow(false)}
                                 onMouseOver={() => setShow(true)}
                               >
@@ -118,32 +120,32 @@ function Cover() {
               </BounceIn>
             </Parallax>
           </Row>
-        </ParallaxProvider>
-        <Row className="mastfoot mt-auto">
-          <Col className="inner"></Col>
-        </Row>
+          <Row className="mastfoot mt-auto">
+            <Col className="inner"></Col>
+          </Row>
+        </Container>
+        <svg
+          viewBox="0 0 1000 100"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="white"
+            opacity="0.10"
+            d="M0 14C0 14 88.64 17.48 300 50C560 90 814 77 1003 40L1015 68L1018 104H0V14Z"
+          ></path>
+          <path
+            fill="white"
+            opacity="0.3"
+            d="M0 45C0 45 271 90.13 500 77C657 68 830 30 1015 14V100H0V45Z"
+          ></path>
+          <path
+            fill="white"
+            d="M0 58C0 58 188.29 90 508 90C798 90 1002 55 1002 55V100H0V58Z"
+          ></path>
+        </svg>
       </Container>
-      <svg
-        viewBox="0 0 1000 100"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-      >
-        <path
-          fill="white"
-          opacity="0.10"
-          d="M0 14C0 14 88.64 17.48 300 50C560 90 814 77 1003 40L1015 68L1018 104H0V14Z"
-        ></path>
-        <path
-          fill="white"
-          opacity="0.3"
-          d="M0 45C0 45 271 90.13 500 77C657 68 830 30 1015 14V100H0V45Z"
-        ></path>
-        <path
-          fill="white"
-          d="M0 58C0 58 188.29 90 508 90C798 90 1002 55 1002 55V100H0V58Z"
-        ></path>
-      </svg>
-    </Container>
+    </ParallaxProvider>
   );
 }
 
