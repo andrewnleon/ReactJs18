@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
-it("Testing Navar", () => {
+it("Testing Navbar", () => {
   const { queryByTestId } = render(
     <NavBar />
   );

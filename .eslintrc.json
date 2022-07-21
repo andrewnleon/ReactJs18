@@ -13,7 +13,7 @@
     "arrow-body-style": 0,
     "import/no-extraneous-dependencies": ["off", { "devDependencies": false }]
   },
-  "ignorePatterns": ["build", "node_modules", "webpack.*", "./src/config/paths.js"],
+  "ignorePatterns": ["./build", "./node_modules", "./src/config/webpack.*", "./src/config/paths.js"],
   "env": {
     "browser": true,
     "es6": true

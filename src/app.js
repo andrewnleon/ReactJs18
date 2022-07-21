@@ -6,6 +6,7 @@ import SSRProvider from "react-bootstrap/SSRProvider";
 
 import "./styles/App.scss";
 import "@fontsource/space-grotesk";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const Home = lazy(() => import("./pages/home"));
 const Error404 = lazy(() => import("./pages/Error404"));
@@ -15,6 +16,7 @@ const ToolBar = lazy(() => import("./components/NavBar"));
 function app() {
   return (
     <SSRProvider>
+      <ParallaxProvider scrollAxis="vertical">
       <Router>
         <ToolBar />
         <IKContext publicKey={IMAGE_KIT_API_KEY} urlEndpoint={IMAGE_KIT}>
@@ -29,6 +31,7 @@ function app() {
           </main>
         </IKContext>
       </Router>
+      </ParallaxProvider>
     </SSRProvider>
   );
 }
