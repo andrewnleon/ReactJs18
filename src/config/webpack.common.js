@@ -20,6 +20,7 @@ module.exports = {
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
+
     //Env
     new Dotenv(),
 

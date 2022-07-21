@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import * as serviceWorkerRegistration from './services/serviceWorkerRegistration';
-import reportWebVitals from './services/reportWebVitals';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import reportWebVitals from './reportWebVitals';
 import App from './app';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
