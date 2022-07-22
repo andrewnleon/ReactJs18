@@ -61,4 +61,4 @@ jobs:
           app-name: 'andrewnlportfolio'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_03FE8014640240C6A20D8A9C2182907B }}
-          package: .
+          package: release.zip
