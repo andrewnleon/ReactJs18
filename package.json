@@ -68,9 +68,9 @@
     "webpack-merge": "^5.8.0"
   },
   "scripts": {
-    "start": "env-cmd -f .env.production.local serve -s build",
-    "build": "webpack --config ./src/config/webpack.prod.js --mode=production",
-    "start:dev": "env-cmd -f .env.development.local react-scripts start webpack --config webpack.config.js",
+    "start": "env-cmd -e production && serve -s build",
+    "build": "webpack --config ./src/config/webpack.prod.js && env-cmd -e production serve",
+    "start:dev": "react-scripts start webpack --config webpack.config.js && env-cmd -e ./development ",
     "test:dev": "react-scripts test"
   },
   "eslintConfig": {

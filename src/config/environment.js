@@ -1,7 +1,0 @@
-const IMAGE_KIT = process.env.REACT_APP_IMAGE_KIT;
-const IMAGE_KIT_API_KEY = process.env.REACT_APP_IMAGE_KIT_API_KEY;
-
-export {
-	IMAGE_KIT,
-	IMAGE_KIT_API_KEY,
-};

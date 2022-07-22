@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
 import { zoomInRight } from "react-animations";
-import { Parallax, ParallaxProvider, useParallax } from "react-scroll-parallax";
+import { Parallax } from "react-scroll-parallax";
 import { FaLaptopCode } from "react-icons/fa";
 import {
   SiReact,

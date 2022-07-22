@@ -1,7 +1,7 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require("dotenv-webpack");
+// const Dotenv = require("dotenv-webpack");
 const { ServiceWorkerPlugin } = require("service-worker-webpack");
 const paths = require("./paths");
 
@@ -27,7 +27,7 @@ module.exports = {
     }),
 
     //Env
-    new Dotenv({ systemvars: true }),
+    // new Dotenv({ systemvars: false }),
 
     // Copies files from target to destination folder
     new CopyWebpackPlugin({

@@ -1,7 +1,6 @@
 import React, { lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { IKContext } from "imagekitio-react";
-import { IMAGE_KIT, IMAGE_KIT_API_KEY } from "./config/environment";
 import SSRProvider from "react-bootstrap/SSRProvider";
 
 import "./styles/App.scss";
