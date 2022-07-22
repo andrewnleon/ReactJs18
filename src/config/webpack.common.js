@@ -33,7 +33,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "./.env",
+          from: "./.env.production.local",
           to: "",
           globOptions: {
             ignore: ["*.DS_Store"],
