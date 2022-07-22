@@ -46,7 +46,7 @@ function FeedbackCards() {
             {statements.map(function (prop) {
               return (
                 <Carousel.Item key={prop.id} style={{ minHeight: "330px" }}>
-                  <Carousel.Caption className="col-9">
+                  <Carousel.Caption className="col">
                     <Container className="bg-primary text-white pt-4 px-4 pb-1 rounded">
                       <blockquote className="blockquote fst-italic">
                         <p className="border-start border-5 border-secondary border-opacity-25 text-start px-3">
