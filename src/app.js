@@ -18,7 +18,7 @@ function app() {
       <ParallaxProvider scrollAxis="vertical">
       <Router>
         <ToolBar />
-        <IKContext publicKey={IMAGE_KIT_API_KEY} urlEndpoint={IMAGE_KIT}>
+        <IKContext publicKey={"public_kc6OLMDqfnmJC7US1vUWcQDD94c="}  urlEndpoint={"https://ik.imagekit.io/kcxjb1dyl"}>
           <main>
             <Routes>
               <Route path="/" exact element={<Home />} />
