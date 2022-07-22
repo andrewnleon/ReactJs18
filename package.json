@@ -73,7 +73,7 @@
   "scripts": {
     "test": "react-scripts test",
     "start": "serve -s build && env-cmd -e production",
-    "build": "webpack --config ./src/config/webpack.prod.js && env-cmd -f .env",
+    "build": "webpack --config ./src/config/webpack.prod.js && env-cmd -e production",
     "start:dev": "react-scripts start webpack --config webpack.config.js --mode=production && env-cmd -e development",
     "preinstall": "npx npm-force-resolutions"
   },
