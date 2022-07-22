@@ -1,6 +1,7 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 const { ServiceWorkerPlugin } = require("service-worker-webpack");
 const paths = require("./paths");
 
@@ -25,9 +26,20 @@ module.exports = {
       enableWorkboxLogging: true,
     }),
 
+    //Env
+    new Dotenv({ systemvars: true }),
+
     // Copies files from target to destination folder
     new CopyWebpackPlugin({
       patterns: [
+        {
+          from: "./.env.production.local",
+          to: "",
+          globOptions: {
+            ignore: ["*.DS_Store"],
+          },
+          noErrorOnMissing: true,
+        },
         {
           from: "./public/manifest.json",
           to: "",
@@ -66,28 +78,10 @@ module.exports = {
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
-      baseUrl: '/',
       template: "./public/index.html",
-      templateParameters(compilation, assets, options) {
-        return {
-          compilation,
-          webpack: compilation.getStats().toJson(),
-          webpackConfig: compilation.options,
-          htmlWebpackPlugin: {
-            files: assets,
-            options,
-          },
-          process,
-        }
-      },
       filename: "index.html",
       favicon: "./public/favicon.ico",
       manifest: "./public/manifest.json",
-      chunksSortMode: 'auto',
-      minify: {
-        collapseWhitespace: false,
-      },
-      cache: true,
     }),
   ],
 

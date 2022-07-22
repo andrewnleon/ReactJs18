@@ -2,6 +2,7 @@ import React, { lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { IKContext } from "imagekitio-react";
 import SSRProvider from "react-bootstrap/SSRProvider";
+import { IMAGE_KIT, IMAGE_KIT_API_KEY } from "./config/environment";
 
 import "./styles/App.scss";
 import "@fontsource/space-grotesk";
@@ -18,7 +19,7 @@ function app() {
       <ParallaxProvider scrollAxis="vertical">
       <Router>
         <ToolBar />
-        <IKContext publicKey={"public_kc6OLMDqfnmJC7US1vUWcQDD94c="}  urlEndpoint={"https://ik.imagekit.io/kcxjb1dyl"}>
+        <IKContext publicKey={IMAGE_KIT_API_KEY} urlEndpoint={IMAGE_KIT}>
           <main>
             <Routes>
               <Route path="/" exact element={<Home />} />
