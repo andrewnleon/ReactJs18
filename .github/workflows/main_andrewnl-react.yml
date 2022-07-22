@@ -57,7 +57,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'andrewnl-react'
+          app-name: 'andrewnl'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA376877E46A416E8DE4393A5B60742D }}
           package: release.zip
