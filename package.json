@@ -39,6 +39,9 @@
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/eslint-parser": "^7.18.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
@@ -50,9 +53,10 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prettier": "^4.2.1",
     "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.1",
     "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^2.6.1",
     "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.7.2",
     "prettier": "^2.7.1",
     "react-scripts": "5.0.1",
     "sass-loader": "^13.0.2",
@@ -62,9 +66,9 @@
     "webpack-merge": "^5.8.0"
   },
   "scripts": {
-    "start": "serve -s build env-cmd -f ./src/config/.env.production.local",
+    "start": "serve -s build env-cmd -f .env.production.local",
     "build": "webpack --config ./src/config/webpack.prod.js --mode=production",
-    "start:dev": "react-scripts start webpack --config webpack.config.js env-cmd -f ./src/config/.env.development.local",
+    "start:dev": "react-scripts start webpack --config webpack.config.js env-cmd -f .env.development.local",
     "test:dev": "react-scripts test"
   },
   "eslintConfig": {
