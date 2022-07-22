@@ -62,10 +62,9 @@
   },
   "scripts": {
     "start": "serve -s build",
-    "start:dev": "react-scripts start webpack --config webpack.config.js env-cmd -f ./.env",
     "build": "webpack --config ./src/config/webpack.prod.js --mode=production",
-    "build:dev": "webpack --config ./src/config/webpack.dev.js --mode=development",
-    "test": "react-scripts test"
+    "start:dev": "react-scripts start webpack --config webpack.config.js env-cmd -f ./.env",
+    "test:dev": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
