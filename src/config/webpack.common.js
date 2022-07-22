@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: paths.build,
     filename: "[name].bundle.js",
-    publicPath: "",
+    publicPath: "./build",
   },
 
   // Customize the webpack build process
@@ -27,11 +27,19 @@ module.exports = {
     }),
 
     //Env
-    new Dotenv(),
+    new Dotenv({ systemvars: true }),
 
     // Copies files from target to destination folder
     new CopyWebpackPlugin({
       patterns: [
+        {
+          from: "./.env",
+          to: "",
+          globOptions: {
+            ignore: ["*.DS_Store"],
+          },
+          noErrorOnMissing: true,
+        },
         {
           from: "./public/manifest.json",
           to: "",
