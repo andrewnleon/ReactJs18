@@ -1,11 +1,7 @@
 const { merge } = require('webpack-merge')
 
 const common = require('./webpack.common')
-const WorkboxPlugin = require('workbox-webpack-plugin');
-new WorkboxPlugin.InjectManifest({
-      swSrc: './src/service-worker.js',
-      swDest: "service-worker.js"
-}),
+
 module.exports = merge(common, {
   // Set the mode to development or production
   mode: 'development',
