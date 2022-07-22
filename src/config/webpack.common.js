@@ -2,6 +2,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
+const { ServiceWorkerPlugin } = require("service-worker-webpack");
 const paths = require("./paths");
 
 module.exports = {
@@ -20,6 +21,10 @@ module.exports = {
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
+    //Service Worker
+    new ServiceWorkerPlugin({
+      enableWorkboxLogging: true,
+    }),
 
     //Env
     new Dotenv(),

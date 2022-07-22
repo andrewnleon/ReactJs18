@@ -19,7 +19,9 @@
     "react-router-dom": "^6.3.0",
     "react-scroll-parallax": "^3.2.0",
     "react-scrollspy-nav": "^1.3.0",
+    "service-worker-webpack": "^0.0.11",
     "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.3",
     "workbox-broadcast-update": "^6.5.3",
     "workbox-cacheable-response": "^6.5.3",
@@ -31,8 +33,7 @@
     "workbox-range-requests": "^6.5.3",
     "workbox-routing": "^6.5.3",
     "workbox-strategies": "^6.5.3",
-    "workbox-streams": "^6.5.3",
-    "web-vitals": "^2.1.4"
+    "workbox-streams": "^6.5.3"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
@@ -60,10 +61,10 @@
     "webpack-merge": "^5.8.0"
   },
   "scripts": {
-    "build": "webpack --config ./src/config/webpack.prod.js --mode=production",
     "start": "serve -s build",
     "start:dev": "react-scripts start webpack --config webpack.config.js env-cmd -f ./.env",
-    "serve:build": "serve -s build",
+    "build": "webpack --config ./src/config/webpack.prod.js --mode=production",
+    "build:dev": "webpack --config ./src/config/webpack.dev.js --mode=development",
     "test": "react-scripts test"
   },
   "eslintConfig": {

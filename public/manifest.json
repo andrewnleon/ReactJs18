@@ -1,6 +1,6 @@
 {
   "id": "/",
-  "start_url": "service-worker.js",
+  "start_url": "./service-worker.js",
   "display": "standalone",
   "theme_color": "#0099ff",
   "background_color": "#003366",
