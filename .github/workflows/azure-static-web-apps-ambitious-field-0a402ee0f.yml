@@ -33,7 +33,7 @@ jobs:
         with:
           # Filename for archive
           filename: release.zip
-          path: ./build
+          path: build
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
