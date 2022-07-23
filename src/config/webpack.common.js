@@ -41,7 +41,7 @@ module.exports = {
           noErrorOnMissing: true,
         },
         {
-          from: "./.env.production.local",
+          from: "./.env",
           to: "",
           globOptions: {
             ignore: ["*.DS_Store"],
