@@ -10,12 +10,12 @@ function FeedbackCards() {
     data: statements,
     isLoadingSlides,
     errorSlides,
-  } = useFetch("./data/FeedbackData.json");
+  } = useFetch("data/FeedbackData.json");
   const {
     data: jopHistory,
     isLoadingLogos,
     errorLogos,
-  } = useFetch("./data/JobHistoryData.json");
+  } = useFetch("data/JobHistoryData.json");
   return (
     <Container>
       <Slide triggerOnce={true} direction="up">
