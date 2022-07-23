@@ -33,7 +33,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "./.web.config",
+          from: "./src/config/azure",
           to: "",
           globOptions: {
             ignore: ["*.DS_Store"],
