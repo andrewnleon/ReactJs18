@@ -33,6 +33,14 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
+          from: "./.web.config",
+          to: "",
+          globOptions: {
+            ignore: ["*.DS_Store"],
+          },
+          noErrorOnMissing: true,
+        },
+        {
           from: "./.env.production.local",
           to: "",
           globOptions: {
@@ -104,7 +112,7 @@ module.exports = {
 
   resolve: {
     modules: [paths.src, "node_modules"],
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".js", ".jsx", ".json", ".config"],
     alias: {
       "@": paths.src,
       assets: paths.public,

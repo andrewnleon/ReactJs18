@@ -10,7 +10,6 @@ function index() {
       <Cover />
       <RecentWork />
       <Portfolio />
-      <Feedback />
       <Contact />
     </>
   );
