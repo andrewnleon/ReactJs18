@@ -5,13 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "@fontsource/space-grotesk": "^4.5.8",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.3.0",
     "bootstrap": "^5.2.0-beta1",
     "dotenv-webpack": "^8.0.0",
     "imagekitio-react": "^1.1.1",
-    "next": "^12.2.3",
     "react": "^18.2.0",
     "react-animations": "^1.0.0",
     "react-awesome-reveal": "^3.8.1",
@@ -39,6 +35,9 @@
     "workbox-streams": "^6.5.3"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.3.0",
     "@babel/core": "^7.18.9",
     "@babel/eslint-parser": "^7.18.9",
     "babel-loader": "^8.2.5",
